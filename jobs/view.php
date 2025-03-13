@@ -47,7 +47,7 @@ $stmt = $conn->prepare("
            u.last_name,
            u.profile_image
     FROM bids b
-    JOIN users u ON b.freelancer_id = u.id
+    JOIN users u ON b.user_id = u.id
     WHERE b.job_id = ?
     ORDER BY 
         CASE WHEN b.status = 'accepted' THEN 1
@@ -67,7 +67,7 @@ $user_bid = null;
 if (is_logged_in()) {
     $stmt = $conn->prepare("
         SELECT * FROM bids 
-        WHERE job_id = ? AND freelancer_id = ?
+        WHERE job_id = ? AND user_id = ?
     ");
     $user_id = get_current_user_id();
     $stmt->bind_param('ii', $job_id, $user_id);
@@ -109,7 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         
         // Insert bid
         $stmt = $conn->prepare("
-            INSERT INTO bids (job_id, freelancer_id, amount, proposal, timeline)
+            INSERT INTO bids (job_id, user_id, amount, proposal, timeline)
             VALUES (?, ?, ?, ?, ?)
         ");
         
