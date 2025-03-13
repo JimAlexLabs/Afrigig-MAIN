@@ -16,7 +16,6 @@ $job_id = (int)$_GET['id'];
 $conn = getDbConnection();
 $stmt = $conn->prepare("
     SELECT j.*, 
-           c.name as category_name,
            u.first_name,
            u.last_name,
            u.profile_image,
@@ -27,7 +26,6 @@ $stmt = $conn->prepare("
            MAX(b.amount) as highest_bid,
            AVG(b.amount) as average_bid
     FROM jobs j
-    LEFT JOIN categories c ON j.category_id = c.id
     LEFT JOIN users u ON j.client_id = u.id
     LEFT JOIN bids b ON j.id = b.job_id
     WHERE j.id = ?
@@ -289,7 +287,7 @@ ob_start();
             </svg>
             <div>
                 <div class="text-sm">Category</div>
-                <div class="font-bold"><?php echo htmlspecialchars($job['category_name']); ?></div>
+                <div class="font-bold"><?php echo isset($job['category_name']) ? htmlspecialchars($job['category_name']) : 'N/A'; ?></div>
             </div>
         </div>
         
