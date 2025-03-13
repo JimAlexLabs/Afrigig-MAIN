@@ -12,9 +12,13 @@ if [ ! -f ".env" ]; then
     exit 1
 fi
 
-# Update code from repository
-echo "Pulling latest code..."
-git pull origin main
+# Backup the current application
+echo "Creating backup..."
+TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
+BACKUP_DIR="backups/${TIMESTAMP}"
+mkdir -p $BACKUP_DIR
+cp -R * $BACKUP_DIR 2>/dev/null || true
+echo "Backup created at $BACKUP_DIR"
 
 # Install/update dependencies
 echo "Installing dependencies..."
