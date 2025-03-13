@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Allow: /jobs
+Allow: /categories
+Allow: /freelancers
+
+Disallow: /admin
+Disallow: /login
+Disallow: /register
+Disallow: /password
+Disallow: /uploads
+Disallow: /api
+Disallow: /*.php$
+Disallow: /*?*
+
+Sitemap: https://afrigig.org/sitemap.xml 
