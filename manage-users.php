@@ -73,6 +73,14 @@ $stmt->bind_param("i", $_SESSION['user_id']);
 $stmt->execute();
 $users = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
 
+// Add default status if not set
+foreach ($users as &$user) {
+    if (!isset($user['status'])) {
+        $user['status'] = 'active';
+    }
+}
+unset($user); // Break the reference
+
 $page_title = 'Manage Users';
 ob_start();
 ?>
@@ -150,7 +158,11 @@ ob_start();
                                                     <?php echo htmlspecialchars($user['first_name'] . ' ' . $user['last_name']); ?>
                                                 </div>
                                                 <div class="text-sm text-gray-500">
-                                                    @<?php echo htmlspecialchars($user['username']); ?>
+                                                    <?php if (isset($user['username']) && !empty($user['username'])): ?>
+                                                        @<?php echo htmlspecialchars($user['username']); ?>
+                                                    <?php else: ?>
+                                                        <span class="text-gray-400">No username</span>
+                                                    <?php endif; ?>
                                                 </div>
                                             </div>
                                         </div>
@@ -166,7 +178,8 @@ ob_start();
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full 
                                             <?php 
-                                            switch ($user['status']) {
+                                            $status = $user['status'] ?? 'active';
+                                            switch ($status) {
                                                 case 'active': echo 'bg-green-100 text-green-800'; break;
                                                 case 'suspended': echo 'bg-yellow-100 text-yellow-800'; break;
                                                 case 'banned': echo 'bg-red-100 text-red-800'; break;
@@ -174,7 +187,7 @@ ob_start();
                                                 default: echo 'bg-gray-100 text-gray-800';
                                             }
                                             ?>">
-                                            <?php echo ucfirst(htmlspecialchars($user['status'] ?? 'active')); ?>
+                                            <?php echo ucfirst(htmlspecialchars($status)); ?>
                                         </span>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
@@ -195,7 +208,7 @@ ob_start();
                                             <a href="view-profile.php?id=<?php echo $user['id']; ?>" class="text-primary hover:text-secondary">
                                                 View
                                             </a>
-                                            <?php if ($user['status'] !== 'deleted'): ?>
+                                            <?php if (($user['status'] ?? 'active') !== 'deleted'): ?>
                                                 <form method="POST" class="inline" onsubmit="return confirm('Are you sure you want to delete this user?');">
                                                     <input type="hidden" name="action" value="delete_user">
                                                     <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
@@ -211,8 +224,9 @@ ob_start();
                                                         <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                                                             <?php 
                                                             $statuses = ['active', 'suspended', 'banned'];
+                                                            $currentStatus = $user['status'] ?? 'active';
                                                             foreach ($statuses as $status): 
-                                                                if ($status !== ($user['status'] ?? 'active')):
+                                                                if ($status !== $currentStatus):
                                                             ?>
                                                                 <form method="POST" class="block">
                                                                     <input type="hidden" name="action" value="update_status">
