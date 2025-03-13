@@ -137,6 +137,111 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         header("Location: {$_SERVER['REQUEST_URI']}");
         exit;
     }
+    
+    // Handle delete bid action
+    if ($_POST['action'] === 'delete_bid') {
+        // Validate CSRF token
+        if (!verify_csrf_token($_POST['csrf_token'])) {
+            set_flash_message('error', 'Invalid CSRF token');
+            header("Location: {$_SERVER['REQUEST_URI']}");
+            exit;
+        }
+        
+        // Delete the bid
+        $stmt = $conn->prepare("
+            DELETE FROM bids 
+            WHERE job_id = ? AND user_id = ?
+        ");
+        
+        $user_id = get_current_user_id();
+        $stmt->bind_param('ii', $job_id, $user_id);
+        
+        if ($stmt->execute()) {
+            set_flash_message('success', 'Your bid has been withdrawn successfully');
+        } else {
+            set_flash_message('error', 'Failed to withdraw bid. Please try again.');
+        }
+        
+        header("Location: {$_SERVER['REQUEST_URI']}");
+        exit;
+    }
+    
+    // Handle accept bid action
+    if ($_POST['action'] === 'accept_bid') {
+        // Validate CSRF token
+        if (!verify_csrf_token($_POST['csrf_token'])) {
+            set_flash_message('error', 'Invalid CSRF token');
+            header("Location: {$_SERVER['REQUEST_URI']}");
+            exit;
+        }
+        
+        // Check if user is the job owner
+        if ($job['admin_id'] != get_current_user_id()) {
+            set_flash_message('error', 'You are not authorized to accept bids for this job');
+            header("Location: {$_SERVER['REQUEST_URI']}");
+            exit;
+        }
+        
+        // Check if job is still open
+        if ($job['status'] !== 'open') {
+            set_flash_message('error', 'This job is no longer accepting bids');
+            header("Location: {$_SERVER['REQUEST_URI']}");
+            exit;
+        }
+        
+        // Get the bid ID
+        $bid_id = (int)$_POST['bid_id'];
+        
+        // Update the bid status to accepted
+        $stmt = $conn->prepare("
+            UPDATE bids 
+            SET status = 'accepted' 
+            WHERE id = ? AND job_id = ?
+        ");
+        
+        $stmt->bind_param('ii', $bid_id, $job_id);
+        
+        if ($stmt->execute()) {
+            // Update job status to assigned
+            $stmt = $conn->prepare("
+                UPDATE jobs 
+                SET status = 'assigned' 
+                WHERE id = ?
+            ");
+            
+            $stmt->bind_param('i', $job_id);
+            $stmt->execute();
+            
+            // Get the freelancer ID
+            $stmt = $conn->prepare("
+                SELECT user_id FROM bids 
+                WHERE id = ?
+            ");
+            
+            $stmt->bind_param('i', $bid_id);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $bid_data = $result->fetch_assoc();
+            
+            if ($bid_data) {
+                // Notify the freelancer
+                create_notification(
+                    $bid_data['user_id'],
+                    'Bid Accepted',
+                    "Your bid on '{$job['title']}' has been accepted!",
+                    'bid_accepted',
+                    $job_id
+                );
+            }
+            
+            set_flash_message('success', 'Bid accepted successfully. The job status has been updated to assigned.');
+        } else {
+            set_flash_message('error', 'Failed to accept bid. Please try again.');
+        }
+        
+        header("Location: {$_SERVER['REQUEST_URI']}");
+        exit;
+    }
 }
 
 // Page title
@@ -833,6 +938,27 @@ ob_start();
 ?>
 
 <div class="container">
+    <!-- Flash Messages -->
+    <?php if (isset($_SESSION['flash_messages']) && !empty($_SESSION['flash_messages'])): ?>
+        <?php foreach ($_SESSION['flash_messages'] as $type => $message): ?>
+            <div class="alert alert-<?php echo $type; ?> mb-5">
+                <?php if ($type === 'success'): ?>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="alert-icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                <?php elseif ($type === 'error'): ?>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="alert-icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                <?php endif; ?>
+                <div>
+                    <p class="alert-message"><?php echo $message; ?></p>
+                </div>
+            </div>
+            <?php unset($_SESSION['flash_messages'][$type]); ?>
+        <?php endforeach; ?>
+    <?php endif; ?>
+
     <!-- Job Header Section -->
     <div class="card mb-5">
         <div class="card-header">
@@ -986,15 +1112,18 @@ ob_start();
                 
                 <?php if (!$has_bid): ?>
                     <form action="" method="post" class="bid-form">
+                        <input type="hidden" name="action" value="place_bid">
+                        <input type="hidden" name="csrf_token" value="<?php echo generate_csrf_token(); ?>">
+                        
                         <div class="form-group">
-                            <label for="bid_amount" class="form-label">Bid Amount ($)</label>
+                            <label for="amount" class="form-label">Bid Amount ($)</label>
                             <div class="input-with-icon">
                                 <span class="input-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                     </svg>
                                 </span>
-                                <input type="number" id="bid_amount" name="bid_amount" class="form-control" min="<?php echo $job['salary'] * 0.7; ?>" step="0.01" required>
+                                <input type="number" id="amount" name="amount" class="form-control" min="<?php echo $job['salary'] * 0.7; ?>" step="0.01" required>
                             </div>
                             <div class="form-hint">
                                 Suggested bid range: <?php echo format_money($job['salary'] * 0.7); ?> - <?php echo format_money($job['salary'] * 1.3); ?>
@@ -1002,14 +1131,14 @@ ob_start();
                         </div>
                         
                         <div class="form-group">
-                            <label for="delivery_time" class="form-label">Delivery Time (Days)</label>
+                            <label for="timeline" class="form-label">Delivery Time (Days)</label>
                             <div class="input-with-icon">
                                 <span class="input-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                     </svg>
                                 </span>
-                                <input type="number" id="delivery_time" name="delivery_time" class="form-control" min="1" required>
+                                <input type="number" id="timeline" name="timeline" class="form-control" min="1" required>
                             </div>
                         </div>
                         
@@ -1019,7 +1148,7 @@ ob_start();
                         </div>
                         
                         <div class="bid-actions">
-                            <button type="submit" name="place_bid" class="btn btn-primary">
+                            <button type="submit" class="btn btn-primary">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="btn-icon">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
                                 </svg>
@@ -1048,7 +1177,9 @@ ob_start();
                         
                         <div class="bid-actions">
                             <form action="" method="post" class="delete-bid-form">
-                                <button type="submit" name="delete_bid" class="btn btn-danger" onclick="return confirm('Are you sure you want to withdraw your bid?');">
+                                <input type="hidden" name="action" value="delete_bid">
+                                <input type="hidden" name="csrf_token" value="<?php echo generate_csrf_token(); ?>">
+                                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to withdraw your bid?');">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="btn-icon">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
                                     </svg>
@@ -1114,8 +1245,10 @@ ob_start();
                                 
                                 <?php if ($job['status'] == 'open'): ?>
                                     <form action="" method="post" class="accept-bid-form">
+                                        <input type="hidden" name="action" value="accept_bid">
+                                        <input type="hidden" name="csrf_token" value="<?php echo generate_csrf_token(); ?>">
                                         <input type="hidden" name="bid_id" value="<?php echo $bid['id']; ?>">
-                                        <button type="submit" name="accept_bid" class="btn btn-success">
+                                        <button type="submit" class="btn btn-success">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="btn-icon">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                                             </svg>
