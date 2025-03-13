@@ -183,7 +183,7 @@ ob_start();
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                         <div class="action-buttons">
-                                            <a href="view-job.php?id=<?php echo $job['id']; ?>" class="action-button view-button">
+                                            <a href="jobs/view.php?id=<?php echo $job['id']; ?>" class="action-button view-button">
                                                 <i class="fas fa-eye mr-1"></i> View
                                             </a>
                                             <form method="POST" class="inline" onsubmit="return confirmDelete(event)">
@@ -256,7 +256,10 @@ $additional_styles = '
         font-weight: 500;
         display: inline-flex;
         align-items: center;
+        justify-content: center;
         transition: all 0.2s ease;
+        min-width: 100px;
+        text-align: center;
     }
     
     .view-button {
@@ -290,6 +293,8 @@ $additional_styles = '
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         border-radius: 0.375rem;
         z-index: 50;
+        background-color: white;
+        border: 1px solid rgba(229, 231, 235, 1);
     }
     
     .dropdown-item {
@@ -302,15 +307,16 @@ $additional_styles = '
         background-color: rgba(243, 244, 246, 1);
     }
     
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
         .action-buttons {
             flex-direction: column;
-            align-items: flex-start;
+            align-items: stretch;
+            gap: 0.25rem;
         }
         
         .action-button {
             width: 100%;
-            justify-content: center;
+            min-width: auto;
         }
     }
 </style>
