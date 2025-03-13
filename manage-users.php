@@ -11,6 +11,12 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['is_admin']) || !$_SESSION[
 $errors = [];
 $success = false;
 
+// Function to check if column exists
+function columnExists($conn, $table, $column) {
+    $result = $conn->query("SHOW COLUMNS FROM {$table} LIKE '{$column}'");
+    return $result->num_rows > 0;
+}
+
 // Handle user status update
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'update_status') {
     $user_id = (int)($_POST['user_id'] ?? 0);
@@ -20,7 +26,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
         try {
             $conn = getDbConnection();
             // Add status column if it doesn't exist
-            $conn->query("ALTER TABLE users ADD COLUMN IF NOT EXISTS status VARCHAR(20) DEFAULT 'active'");
+            if (!columnExists($conn, 'users', 'status')) {
+                $conn->query("ALTER TABLE users ADD COLUMN status VARCHAR(20) DEFAULT 'active'");
+            }
             
             $stmt = $conn->prepare("UPDATE users SET status = ? WHERE id = ?");
             $stmt->bind_param("si", $status, $user_id);
@@ -31,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
                 $errors[] = "Failed to update user status";
             }
         } catch (Exception $e) {
-            $errors[] = "An error occurred. Please try again.";
+            $errors[] = "An error occurred: " . $e->getMessage();
         }
     } else {
         $errors[] = "Invalid user ID or status";
@@ -45,9 +53,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
     if ($user_id > 0) {
         try {
             $conn = getDbConnection();
-            // Add status and deleted_at columns if they don't exist
-            $conn->query("ALTER TABLE users ADD COLUMN IF NOT EXISTS status VARCHAR(20) DEFAULT 'active'");
-            $conn->query("ALTER TABLE users ADD COLUMN IF NOT EXISTS deleted_at TIMESTAMP NULL DEFAULT NULL");
+            // Add status column if it doesn't exist
+            if (!columnExists($conn, 'users', 'status')) {
+                $conn->query("ALTER TABLE users ADD COLUMN status VARCHAR(20) DEFAULT 'active'");
+            }
+            
+            // Add deleted_at column if it doesn't exist
+            if (!columnExists($conn, 'users', 'deleted_at')) {
+                $conn->query("ALTER TABLE users ADD COLUMN deleted_at TIMESTAMP NULL DEFAULT NULL");
+            }
             
             $stmt = $conn->prepare("UPDATE users SET status = 'deleted', deleted_at = NOW() WHERE id = ?");
             $stmt->bind_param("i", $user_id);
@@ -58,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
                 $errors[] = "Failed to delete user";
             }
         } catch (Exception $e) {
-            $errors[] = "An error occurred. Please try again.";
+            $errors[] = "An error occurred: " . $e->getMessage();
         }
     } else {
         $errors[] = "Invalid user ID";
@@ -69,7 +83,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
 $conn = getDbConnection();
 
 // Add status column if it doesn't exist
-$conn->query("ALTER TABLE users ADD COLUMN IF NOT EXISTS status VARCHAR(20) DEFAULT 'active'");
+if (!columnExists($conn, 'users', 'status')) {
+    $conn->query("ALTER TABLE users ADD COLUMN status VARCHAR(20) DEFAULT 'active'");
+}
 
 $stmt = $conn->prepare("
     SELECT u.*, 
