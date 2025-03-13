@@ -26,10 +26,12 @@ Afrigig is a professional freelance marketplace platform designed to empower Afr
 
 ## Installation
 
-1. Clone the repository:
+1. Extract the project files to your web server directory:
 
 ```bash
-git clone https://github.com/yourusername/afrigig.git
+# Extract the project to your web server directory
+# For example:
+unzip afrigig.zip -d /var/www/html/afrigig
 cd afrigig
 ```
 
