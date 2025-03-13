@@ -12,6 +12,9 @@ $user_id = $_SESSION['user_id'];
 $errors = [];
 $success = false;
 
+// Support user ID (Customer Support admin)
+$support_user_id = 4; // ID of the support user we just created
+
 // Get conversations (grouped messages)
 $conn = getDbConnection();
 $stmt = $conn->prepare("
@@ -58,12 +61,22 @@ ob_start();
 
 <div class="container mx-auto px-4 py-8">
     <div class="max-w-5xl mx-auto">
-        <h1 class="text-3xl font-bold mb-8">Messages</h1>
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl font-bold">Messages</h1>
+            <a href="chat.php?user=<?php echo $support_user_id; ?>" class="btn btn-primary">
+                <i class="fas fa-headset mr-2"></i> Contact Support
+            </a>
+        </div>
 
         <?php if (empty($conversations)): ?>
             <div class="bg-white shadow rounded-lg p-6 text-center">
                 <p class="text-gray-600">No messages yet</p>
-                <a href="jobs.php" class="btn btn-primary mt-4">Browse Jobs</a>
+                <div class="mt-4 flex justify-center gap-4">
+                    <a href="jobs.php" class="btn btn-primary">Browse Jobs</a>
+                    <a href="chat.php?user=<?php echo $support_user_id; ?>" class="btn btn-secondary">
+                        <i class="fas fa-headset mr-2"></i> Contact Support
+                    </a>
+                </div>
             </div>
         <?php else: ?>
             <div class="bg-white shadow rounded-lg overflow-hidden">
@@ -78,15 +91,21 @@ ob_start();
                         $conversation_id = ($conv['sender_id'] < $conv['receiver_id']) 
                             ? $conv['sender_id'] . '-' . $conv['receiver_id'] 
                             : $conv['receiver_id'] . '-' . $conv['sender_id'];
+                            
+                        // Check if this is a support conversation
+                        $is_support = ($other_user_id == $support_user_id);
                         ?>
                         <a href="chat.php?user=<?php echo $other_user_id; ?>" 
                            class="block p-6 hover:bg-gray-50 transition-colors">
                             <div class="flex justify-between items-start">
                                 <div>
-                                    <h3 class="text-lg font-semibold text-gray-900">
+                                    <h3 class="text-lg font-semibold text-gray-900 flex items-center">
                                         <?php echo htmlspecialchars($other_user_name); ?>
+                                        <?php if ($is_support): ?>
+                                            <span class="ml-2 bg-primary text-white text-xs px-2 py-1 rounded-full">Support</span>
+                                        <?php endif; ?>
                                     </h3>
-                                    <?php if (!empty($conv['job_title'])): ?>
+                                    <?php if (!empty($conv['job_title']) && !$is_support): ?>
                                     <p class="text-sm text-gray-600 mt-1">
                                         Re: <?php echo htmlspecialchars($conv['job_title']); ?>
                                     </p>

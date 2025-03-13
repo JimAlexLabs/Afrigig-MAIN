@@ -79,6 +79,10 @@ ob_start();
                             <i class="fas fa-users"></i>
                             Manage Users
                         </a>
+                        <a href="admin-support.php" class="sidebar-link">
+                            <i class="fas fa-headset"></i>
+                            Support Dashboard
+                        </a>
                     <?php else: ?>
                         <a href="find-jobs.php" class="sidebar-link">
                             <i class="fas fa-search"></i>
