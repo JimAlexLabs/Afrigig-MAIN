@@ -1,0 +1,23 @@
+# Configuration files with sensitive information
+/config/config.php
+
+# Vendor directories
+/vendor/
+
+# Temporary files
+*.log
+*.tmp
+.DS_Store
+
+# Environment files
+.env
+
+# IDE files
+.idea/
+.vscode/
+
+# Database dumps
+*.sql
+
+# Cache files
+/cache/ 

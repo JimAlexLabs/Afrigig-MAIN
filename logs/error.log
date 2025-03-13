@@ -1,0 +1,797 @@
+[12-Mar-2025 15:13:06 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 106
+[12-Mar-2025 15:13:06 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 113
+[12-Mar-2025 15:13:07 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 106
+[12-Mar-2025 15:13:07 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 113
+[12-Mar-2025 15:13:10 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 106
+[12-Mar-2025 15:13:10 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 113
+[12-Mar-2025 15:13:21 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 106
+[12-Mar-2025 15:13:21 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 113
+[12-Mar-2025 15:13:22 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 106
+[12-Mar-2025 15:13:22 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 113
+[12-Mar-2025 15:13:24 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 106
+[12-Mar-2025 15:13:24 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 113
+[12-Mar-2025 15:13:25 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 106
+[12-Mar-2025 15:13:25 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 113
+[12-Mar-2025 15:13:26 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 106
+[12-Mar-2025 15:13:26 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 113
+[12-Mar-2025 15:13:26 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 106
+[12-Mar-2025 15:13:26 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 113
+[12-Mar-2025 15:13:27 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 106
+[12-Mar-2025 15:13:27 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 113
+[12-Mar-2025 15:13:28 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 106
+[12-Mar-2025 15:13:28 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 113
+[12-Mar-2025 15:13:37 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 106
+[12-Mar-2025 15:13:37 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 113
+[12-Mar-2025 15:13:38 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 106
+[12-Mar-2025 15:13:38 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 113
+[12-Mar-2025 15:13:41 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 106
+[12-Mar-2025 15:13:41 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 113
+[12-Mar-2025 15:14:08 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'afrigig_db.categories' doesn't exist in /Users/jimalex/Downloads/Afrigig/jobs/index.php:99
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs/index.php(99): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs/index.php on line 99
+[12-Mar-2025 15:14:08 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 106
+[12-Mar-2025 15:14:08 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 113
+[12-Mar-2025 15:14:10 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 106
+[12-Mar-2025 15:14:10 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 113
+[12-Mar-2025 15:21:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.title' in 'field list' in /Users/jimalex/Downloads/Afrigig/index.php:23
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/index.php(23): mysqli->prepare('\n    SELECT t.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/index.php on line 23
+[12-Mar-2025 15:21:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.title' in 'field list' in /Users/jimalex/Downloads/Afrigig/index.php:23
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/index.php(23): mysqli->prepare('\n    SELECT t.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/index.php on line 23
+[12-Mar-2025 15:24:42 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.role' in 'field list' in /Users/jimalex/Downloads/Afrigig/index.php:23
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/index.php(23): mysqli->prepare('\n    SELECT t.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/index.php on line 23
+[12-Mar-2025 15:24:42 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.role' in 'field list' in /Users/jimalex/Downloads/Afrigig/index.php:23
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/index.php(23): mysqli->prepare('\n    SELECT t.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/index.php on line 23
+[12-Mar-2025 15:24:43 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.role' in 'field list' in /Users/jimalex/Downloads/Afrigig/index.php:23
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/index.php(23): mysqli->prepare('\n    SELECT t.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/index.php on line 23
+[12-Mar-2025 15:24:43 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.role' in 'field list' in /Users/jimalex/Downloads/Afrigig/index.php:23
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/index.php(23): mysqli->prepare('\n    SELECT t.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/index.php on line 23
+[12-Mar-2025 15:24:43 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.role' in 'field list' in /Users/jimalex/Downloads/Afrigig/index.php:23
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/index.php(23): mysqli->prepare('\n    SELECT t.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/index.php on line 23
+[12-Mar-2025 15:24:43 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.role' in 'field list' in /Users/jimalex/Downloads/Afrigig/index.php:23
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/index.php(23): mysqli->prepare('\n    SELECT t.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/index.php on line 23
+[12-Mar-2025 15:24:43 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.role' in 'field list' in /Users/jimalex/Downloads/Afrigig/index.php:23
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/index.php(23): mysqli->prepare('\n    SELECT t.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/index.php on line 23
+[12-Mar-2025 15:24:43 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.role' in 'field list' in /Users/jimalex/Downloads/Afrigig/index.php:23
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/index.php(23): mysqli->prepare('\n    SELECT t.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/index.php on line 23
+[12-Mar-2025 15:24:43 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.role' in 'field list' in /Users/jimalex/Downloads/Afrigig/index.php:23
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/index.php(23): mysqli->prepare('\n    SELECT t.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/index.php on line 23
+[12-Mar-2025 15:24:43 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.role' in 'field list' in /Users/jimalex/Downloads/Afrigig/index.php:23
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/index.php(23): mysqli->prepare('\n    SELECT t.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/index.php on line 23
+[12-Mar-2025 15:24:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.role' in 'field list' in /Users/jimalex/Downloads/Afrigig/index.php:23
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/index.php(23): mysqli->prepare('\n    SELECT t.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/index.php on line 23
+[12-Mar-2025 15:24:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.role' in 'field list' in /Users/jimalex/Downloads/Afrigig/index.php:23
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/index.php(23): mysqli->prepare('\n    SELECT t.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/index.php on line 23
+[12-Mar-2025 15:24:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.role' in 'field list' in /Users/jimalex/Downloads/Afrigig/index.php:23
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/index.php(23): mysqli->prepare('\n    SELECT t.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/index.php on line 23
+[12-Mar-2025 15:24:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.role' in 'field list' in /Users/jimalex/Downloads/Afrigig/index.php:23
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/index.php(23): mysqli->prepare('\n    SELECT t.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/index.php on line 23
+[12-Mar-2025 15:24:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.role' in 'field list' in /Users/jimalex/Downloads/Afrigig/index.php:23
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/index.php(23): mysqli->prepare('\n    SELECT t.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/index.php on line 23
+[12-Mar-2025 15:24:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.role' in 'field list' in /Users/jimalex/Downloads/Afrigig/index.php:23
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/index.php(23): mysqli->prepare('\n    SELECT t.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/index.php on line 23
+[12-Mar-2025 15:26:14 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'afrigig_db.categories' doesn't exist in /Users/jimalex/Downloads/Afrigig/jobs/index.php:99
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs/index.php(99): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs/index.php on line 99
+[12-Mar-2025 15:26:34 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'afrigig_db.categories' doesn't exist in /Users/jimalex/Downloads/Afrigig/jobs/index.php:99
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs/index.php(99): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs/index.php on line 99
+[12-Mar-2025 15:45:35 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.user_id' in 'on clause' in /Users/jimalex/Downloads/Afrigig/jobs.php:7
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs.php(7): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs.php on line 7
+[12-Mar-2025 15:46:23 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.user_id' in 'on clause' in /Users/jimalex/Downloads/Afrigig/jobs.php:7
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs.php(7): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs.php on line 7
+[12-Mar-2025 15:47:06 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.user_id' in 'on clause' in /Users/jimalex/Downloads/Afrigig/jobs.php:7
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs.php(7): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs.php on line 7
+[12-Mar-2025 15:47:16 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.user_id' in 'on clause' in /Users/jimalex/Downloads/Afrigig/jobs.php:7
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs.php(7): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs.php on line 7
+[12-Mar-2025 15:49:04 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.user_id' in 'on clause' in /Users/jimalex/Downloads/Afrigig/jobs.php:7
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs.php(7): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs.php on line 7
+[12-Mar-2025 15:49:13 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.user_id' in 'on clause' in /Users/jimalex/Downloads/Afrigig/jobs.php:7
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs.php(7): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs.php on line 7
+[12-Mar-2025 15:51:42 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.user_id' in 'on clause' in /Users/jimalex/Downloads/Afrigig/jobs.php:7
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs.php(7): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs.php on line 7
+[12-Mar-2025 16:07:33 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.client_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:19
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(19): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 19
+[12-Mar-2025 16:07:50 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.client_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:19
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(19): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 19
+[12-Mar-2025 16:08:00 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.client_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:19
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(19): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 19
+[12-Mar-2025 16:09:32 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.client_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:19
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(19): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 19
+[12-Mar-2025 16:09:40 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.client_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:19
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(19): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 19
+[12-Mar-2025 16:09:45 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.client_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:19
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(19): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 19
+[12-Mar-2025 16:11:43 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.client_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:19
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(19): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 19
+[12-Mar-2025 16:11:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.client_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:19
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(19): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 19
+[12-Mar-2025 16:11:53 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.client_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:19
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(19): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 19
+[12-Mar-2025 16:17:03 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.client_id' in 'on clause' in /Users/jimalex/Downloads/Afrigig/jobs.php:7
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs.php(7): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs.php on line 7
+[12-Mar-2025 16:17:19 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.client_id' in 'on clause' in /Users/jimalex/Downloads/Afrigig/jobs.php:7
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs.php(7): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs.php on line 7
+[12-Mar-2025 16:17:24 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.client_id' in 'on clause' in /Users/jimalex/Downloads/Afrigig/jobs.php:7
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs.php(7): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs.php on line 7
+[12-Mar-2025 16:17:31 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.client_id' in 'on clause' in /Users/jimalex/Downloads/Afrigig/jobs.php:7
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs.php(7): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs.php on line 7
+[12-Mar-2025 16:17:41 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.client_id' in 'on clause' in /Users/jimalex/Downloads/Afrigig/jobs.php:7
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs.php(7): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs.php on line 7
+[12-Mar-2025 16:40:41 UTC] Database connection successful
+[12-Mar-2025 16:41:27 UTC] Database connection successful
+[12-Mar-2025 16:41:37 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'afrigig_db.categories' doesn't exist in /Users/jimalex/Downloads/Afrigig/jobs/index.php:99
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs/index.php(99): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs/index.php on line 99
+[12-Mar-2025 16:41:43 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'afrigig_db.categories' doesn't exist in /Users/jimalex/Downloads/Afrigig/jobs/index.php:99
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs/index.php(99): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs/index.php on line 99
+[12-Mar-2025 17:00:18 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/profile.php:31
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/profile.php(31): mysqli->query('SELECT COUNT(*)...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/profile.php on line 31
+[12-Mar-2025 17:00:58 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/profile.php:31
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/profile.php(31): mysqli->query('SELECT COUNT(*)...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/profile.php on line 31
+[12-Mar-2025 17:01:11 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.client_id' in 'on clause' in /Users/jimalex/Downloads/Afrigig/jobs.php:7
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs.php(7): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs.php on line 7
+[12-Mar-2025 17:02:27 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'afrigig_db.conversations' doesn't exist in /Users/jimalex/Downloads/Afrigig/messages.php:17
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/messages.php(17): mysqli->prepare('\n    SELECT DIS...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/messages.php on line 17
+[12-Mar-2025 17:21:09 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:50
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(50): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 50
+[12-Mar-2025 17:21:10 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:50
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(50): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 50
+[12-Mar-2025 17:24:31 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:24:32 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:24:32 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:24:33 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:24:33 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:24:34 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:24:35 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:24:36 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:24:40 UTC] Database connection successful
+[12-Mar-2025 17:24:40 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:24:42 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:26:49 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:26:50 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:26:50 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:26:50 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:26:50 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:26:51 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:26:53 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:26:54 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:26:54 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:26:57 UTC] Database connection successful
+[12-Mar-2025 17:26:57 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:33:22 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:33:23 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:33:23 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:33:23 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:33:23 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:33:24 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:33:24 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:33:28 UTC] Database connection successful
+[12-Mar-2025 17:33:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:33:49 UTC] Database connection successful
+[12-Mar-2025 17:33:49 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:35:46 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:52
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(52): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 52
+[12-Mar-2025 17:35:47 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:52
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(52): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 52
+[12-Mar-2025 17:35:47 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:52
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(52): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 52
+[12-Mar-2025 17:35:48 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:52
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(52): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 52
+[12-Mar-2025 17:39:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:51
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(51): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 51
+[12-Mar-2025 17:39:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:51
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(51): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 51
+[12-Mar-2025 17:39:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:51
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(51): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 51
+[12-Mar-2025 17:39:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:51
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(51): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 51
+[12-Mar-2025 17:39:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:51
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(51): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 51
+[12-Mar-2025 17:39:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:51
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(51): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 51
+[12-Mar-2025 17:39:32 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:51
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(51): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 51
+[12-Mar-2025 17:39:35 UTC] Database connection successful
+[12-Mar-2025 17:39:35 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:51
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(51): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 51
+[12-Mar-2025 17:39:40 UTC] Database connection successful
+[12-Mar-2025 17:39:40 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:51
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(51): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 51
+[12-Mar-2025 17:44:25 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:44:26 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:44:26 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:44:26 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:44:27 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(33): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 33
+[12-Mar-2025 17:48:54 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:30
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(30): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 30
+[12-Mar-2025 17:48:54 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:30
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(30): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 30
+[12-Mar-2025 17:48:54 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:30
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(30): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 30
+[12-Mar-2025 17:48:54 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:30
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(30): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 30
+[12-Mar-2025 17:48:55 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:30
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(30): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 30
+[12-Mar-2025 17:48:55 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:30
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(30): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 30
+[12-Mar-2025 17:48:55 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:30
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(30): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 30
+[12-Mar-2025 17:48:55 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:30
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(30): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 30
+[12-Mar-2025 17:48:59 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:30
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(30): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 30
+[12-Mar-2025 17:48:59 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:30
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(30): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 30
+[12-Mar-2025 17:51:52 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:47
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(47): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 47
+[12-Mar-2025 17:52:19 UTC] Database connection successful
+[12-Mar-2025 17:52:29 UTC] Database connection successful
+[12-Mar-2025 17:52:35 UTC] Database connection successful
+[12-Mar-2025 17:52:36 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:47
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(47): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 47
+[12-Mar-2025 17:56:19 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:47
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(47): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 47
+[12-Mar-2025 17:56:20 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:47
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(47): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 47
+[12-Mar-2025 17:56:20 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:47
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(47): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 47
+[12-Mar-2025 17:56:20 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:47
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(47): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 47
+[12-Mar-2025 17:56:20 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:47
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(47): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 47
+[12-Mar-2025 17:56:20 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:47
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(47): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 47
+[12-Mar-2025 17:56:21 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:47
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(47): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 47
+[12-Mar-2025 17:56:21 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:47
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(47): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 47
+[12-Mar-2025 17:56:21 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:47
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(47): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 47
+[12-Mar-2025 17:56:21 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:47
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(47): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 47
+[12-Mar-2025 17:56:21 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:47
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(47): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 47
+[12-Mar-2025 17:56:21 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:47
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(47): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 47
+[12-Mar-2025 17:56:22 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:47
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(47): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 47
+[12-Mar-2025 17:56:31 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:47
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(47): mysqli->prepare('\n        SELECT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 47
+[12-Mar-2025 18:11:04 UTC] PHP Warning:  Undefined array key "budget" in /Users/jimalex/Downloads/Afrigig/find-jobs.php on line 57
+[12-Mar-2025 18:11:04 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /Users/jimalex/Downloads/Afrigig/find-jobs.php on line 57
+[12-Mar-2025 18:11:12 UTC] PHP Warning:  Undefined array key "budget" in /Users/jimalex/Downloads/Afrigig/find-jobs.php on line 57
+[12-Mar-2025 18:11:12 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /Users/jimalex/Downloads/Afrigig/find-jobs.php on line 57
+[12-Mar-2025 18:11:15 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'address' in 'field list' in /Users/jimalex/Downloads/Afrigig/profile.php:14
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/profile.php(14): mysqli->prepare('\n    SELECT id,...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/profile.php on line 14
+[12-Mar-2025 18:11:48 UTC] PHP Warning:  Undefined array key "budget" in /Users/jimalex/Downloads/Afrigig/find-jobs.php on line 57
+[12-Mar-2025 18:11:48 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /Users/jimalex/Downloads/Afrigig/find-jobs.php on line 57
+[12-Mar-2025 18:11:51 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/my-bids.php:19
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/my-bids.php(19): mysqli->prepare('\n    SELECT b.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/my-bids.php on line 19
+[12-Mar-2025 18:11:56 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'afrigig_db.conversations' doesn't exist in /Users/jimalex/Downloads/Afrigig/messages.php:17
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/messages.php(17): mysqli->prepare('\n    SELECT DIS...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/messages.php on line 17
+[12-Mar-2025 18:15:14 UTC] PHP Warning:  Undefined array key "budget" in /Users/jimalex/Downloads/Afrigig/find-jobs.php on line 57
+[12-Mar-2025 18:15:14 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /Users/jimalex/Downloads/Afrigig/find-jobs.php on line 57
+[12-Mar-2025 18:15:23 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'address' in 'field list' in /Users/jimalex/Downloads/Afrigig/profile.php:14
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/profile.php(14): mysqli->prepare('\n    SELECT id,...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/profile.php on line 14
+[12-Mar-2025 18:16:49 UTC] Database connection successful
+[12-Mar-2025 18:17:33 UTC] Database connection successful
+[12-Mar-2025 18:18:11 UTC] Database connection successful
+[12-Mar-2025 18:18:16 UTC] Database connection successful
+[12-Mar-2025 18:18:59 UTC] Database connection successful
+[12-Mar-2025 18:19:25 UTC] Database connection successful
+[12-Mar-2025 18:20:08 UTC] Database connection successful
+[12-Mar-2025 18:21:16 UTC] Database connection successful
+[12-Mar-2025 23:39:53 UTC] Database connection successful
+[12-Mar-2025 23:39:54 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.client_id' in 'on clause' in /Users/jimalex/Downloads/Afrigig/jobs.php:7
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs.php(7): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs.php on line 7
+[12-Mar-2025 23:44:07 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.client_id' in 'on clause' in /Users/jimalex/Downloads/Afrigig/jobs.php:7
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs.php(7): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs.php on line 7
+[12-Mar-2025 23:44:25 UTC] Database connection successful
+[12-Mar-2025 23:44:44 UTC] Database connection successful
+[12-Mar-2025 23:45:06 UTC] PHP Warning:  Undefined array key "budget" in /Users/jimalex/Downloads/Afrigig/find-jobs.php on line 57
+[12-Mar-2025 23:45:06 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /Users/jimalex/Downloads/Afrigig/find-jobs.php on line 57
+[12-Mar-2025 23:58:30 UTC] PHP Warning:  Undefined array key "budget" in /Users/jimalex/Downloads/Afrigig/find-jobs.php on line 57
+[12-Mar-2025 23:58:30 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /Users/jimalex/Downloads/Afrigig/find-jobs.php on line 57
+[12-Mar-2025 23:58:48 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'afrigig_db.conversations' doesn't exist in /Users/jimalex/Downloads/Afrigig/messages.php:17
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/messages.php(17): mysqli->prepare('\n    SELECT DIS...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/messages.php on line 17
+[12-Mar-2025 23:59:08 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/my-bids.php:19
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/my-bids.php(19): mysqli->prepare('\n    SELECT b.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/my-bids.php on line 19
+[13-Mar-2025 00:03:19 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'afrigig_db.conversations' doesn't exist in /Users/jimalex/Downloads/Afrigig/messages.php:17
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/messages.php(17): mysqli->prepare('\n    SELECT DIS...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/messages.php on line 17
+[13-Mar-2025 00:13:20 UTC] PHP Warning:  Undefined array key "budget" in /Users/jimalex/Downloads/Afrigig/find-jobs.php on line 57
+[13-Mar-2025 00:13:20 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /Users/jimalex/Downloads/Afrigig/find-jobs.php on line 57
+[13-Mar-2025 00:13:23 UTC] PHP Warning:  Undefined array key "budget" in /Users/jimalex/Downloads/Afrigig/find-jobs.php on line 57
+[13-Mar-2025 00:13:23 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /Users/jimalex/Downloads/Afrigig/find-jobs.php on line 57
+[13-Mar-2025 00:19:21 UTC] PHP Warning:  Undefined array key "budget" in /Users/jimalex/Downloads/Afrigig/find-jobs.php on line 57
+[13-Mar-2025 00:19:21 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /Users/jimalex/Downloads/Afrigig/find-jobs.php on line 57
+[13-Mar-2025 00:25:03 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'afrigig_db.conversations' doesn't exist in /Users/jimalex/Downloads/Afrigig/messages.php:17
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/messages.php(17): mysqli->prepare('\n    SELECT DIS...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/messages.php on line 17
+[13-Mar-2025 00:37:10 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'address' in 'field list' in /Users/jimalex/Downloads/Afrigig/profile.php:14
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/profile.php(14): mysqli->prepare('\n    SELECT id,...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/profile.php on line 14
+[13-Mar-2025 00:37:16 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'address' in 'field list' in /Users/jimalex/Downloads/Afrigig/profile.php:14
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/profile.php(14): mysqli->prepare('\n    SELECT id,...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/profile.php on line 14
+[13-Mar-2025 00:37:26 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/my-bids.php:19
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/my-bids.php(19): mysqli->prepare('\n    SELECT b.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/my-bids.php on line 19
+[13-Mar-2025 00:37:40 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/my-bids.php:19
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/my-bids.php(19): mysqli->prepare('\n    SELECT b.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/my-bids.php on line 19
+[13-Mar-2025 00:38:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'afrigig_db.conversations' doesn't exist in /Users/jimalex/Downloads/Afrigig/messages.php:17
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/messages.php(17): mysqli->prepare('\n    SELECT DIS...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/messages.php on line 17
+[13-Mar-2025 00:38:42 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'afrigig_db.conversations' doesn't exist in /Users/jimalex/Downloads/Afrigig/messages.php:17
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/messages.php(17): mysqli->prepare('\n    SELECT DIS...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/messages.php on line 17
+[13-Mar-2025 00:39:26 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/my-bids.php:19
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/my-bids.php(19): mysqli->prepare('\n    SELECT b.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/my-bids.php on line 19
+[13-Mar-2025 00:41:32 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'address' in 'field list' in /Users/jimalex/Downloads/Afrigig/profile.php:14
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/profile.php(14): mysqli->prepare('\n    SELECT id,...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/profile.php on line 14
+[13-Mar-2025 00:41:39 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'address' in 'field list' in /Users/jimalex/Downloads/Afrigig/profile.php:14
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/profile.php(14): mysqli->prepare('\n    SELECT id,...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/profile.php on line 14
+[13-Mar-2025 00:47:23 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/profile.php:32
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/profile.php(32): mysqli->query('SELECT COUNT(*)...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/profile.php on line 32
+[13-Mar-2025 00:47:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/profile.php:32
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/profile.php(32): mysqli->query('SELECT COUNT(*)...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/profile.php on line 32
+[13-Mar-2025 00:49:51 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/profile.php:32
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/profile.php(32): mysqli->query('SELECT COUNT(*)...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/profile.php on line 32
