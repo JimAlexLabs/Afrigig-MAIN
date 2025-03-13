@@ -805,3 +805,71 @@ Stack trace:
 #0 /Users/jimalex/Downloads/Afrigig/jobs.php(7): mysqli->prepare('\n    SELECT j.*...')
 #1 {main}
   thrown in /Users/jimalex/Downloads/Afrigig/jobs.php on line 7
+[13-Mar-2025 01:09:33 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/profile.php:32
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/profile.php(32): mysqli->query('SELECT COUNT(*)...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/profile.php on line 32
+[13-Mar-2025 01:10:07 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/profile.php:32
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/profile.php(32): mysqli->query('SELECT COUNT(*)...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/profile.php on line 32
+[13-Mar-2025 01:13:56 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.client_id' in 'on clause' in /Users/jimalex/Downloads/Afrigig/jobs.php:7
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs.php(7): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs.php on line 7
+[13-Mar-2025 01:14:00 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.client_id' in 'on clause' in /Users/jimalex/Downloads/Afrigig/jobs.php:7
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs.php(7): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs.php on line 7
+[13-Mar-2025 01:14:27 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.client_id' in 'on clause' in /Users/jimalex/Downloads/Afrigig/jobs.php:7
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs.php(7): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs.php on line 7
+[13-Mar-2025 01:14:33 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'afrigig_db.conversations' doesn't exist in /Users/jimalex/Downloads/Afrigig/messages.php:17
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/messages.php(17): mysqli->prepare('\n    SELECT DIS...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/messages.php on line 17
+[13-Mar-2025 01:14:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.client_id' in 'on clause' in /Users/jimalex/Downloads/Afrigig/jobs.php:7
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs.php(7): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs.php on line 7
+[13-Mar-2025 01:17:18 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'afrigig_db.categories' doesn't exist in /Users/jimalex/Downloads/Afrigig/jobs/index.php:99
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs/index.php(99): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs/index.php on line 99
+[13-Mar-2025 01:17:47 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'afrigig_db.categories' doesn't exist in /Users/jimalex/Downloads/Afrigig/jobs/index.php:99
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs/index.php(99): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs/index.php on line 99
+[13-Mar-2025 01:17:52 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'afrigig_db.categories' doesn't exist in /Users/jimalex/Downloads/Afrigig/jobs/index.php:99
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs/index.php(99): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs/index.php on line 99
+[13-Mar-2025 01:17:56 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'afrigig_db.categories' doesn't exist in /Users/jimalex/Downloads/Afrigig/jobs/index.php:99
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs/index.php(99): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs/index.php on line 99
+[13-Mar-2025 01:18:01 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'afrigig_db.categories' doesn't exist in /Users/jimalex/Downloads/Afrigig/jobs/index.php:99
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs/index.php(99): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs/index.php on line 99
+[13-Mar-2025 01:18:15 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'afrigig_db.conversations' doesn't exist in /Users/jimalex/Downloads/Afrigig/messages.php:17
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/messages.php(17): mysqli->prepare('\n    SELECT DIS...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/messages.php on line 17
+[13-Mar-2025 01:30:33 UTC] Database connection successful
+[13-Mar-2025 01:30:39 UTC] Database connection successful
+[13-Mar-2025 01:33:03 UTC] Database connection successful
