@@ -19,6 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
     if ($user_id > 0 && in_array($status, ['active', 'suspended', 'banned'])) {
         try {
             $conn = getDbConnection();
+            // Add status column if it doesn't exist
+            $conn->query("ALTER TABLE users ADD COLUMN IF NOT EXISTS status VARCHAR(20) DEFAULT 'active'");
+            
             $stmt = $conn->prepare("UPDATE users SET status = ? WHERE id = ?");
             $stmt->bind_param("si", $status, $user_id);
             
@@ -42,7 +45,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
     if ($user_id > 0) {
         try {
             $conn = getDbConnection();
-            // Instead of actually deleting, we'll set a deleted flag
+            // Add status and deleted_at columns if they don't exist
+            $conn->query("ALTER TABLE users ADD COLUMN IF NOT EXISTS status VARCHAR(20) DEFAULT 'active'");
+            $conn->query("ALTER TABLE users ADD COLUMN IF NOT EXISTS deleted_at TIMESTAMP NULL DEFAULT NULL");
+            
             $stmt = $conn->prepare("UPDATE users SET status = 'deleted', deleted_at = NOW() WHERE id = ?");
             $stmt->bind_param("i", $user_id);
             
@@ -61,6 +67,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
 
 // Get all users except current admin
 $conn = getDbConnection();
+
+// Add status column if it doesn't exist
+$conn->query("ALTER TABLE users ADD COLUMN IF NOT EXISTS status VARCHAR(20) DEFAULT 'active'");
+
 $stmt = $conn->prepare("
     SELECT u.*, 
            (SELECT COUNT(*) FROM jobs WHERE freelancer_id = u.id) as assigned_jobs,
@@ -72,14 +82,6 @@ $stmt = $conn->prepare("
 $stmt->bind_param("i", $_SESSION['user_id']);
 $stmt->execute();
 $users = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
-
-// Add default status if not set
-foreach ($users as &$user) {
-    if (!isset($user['status'])) {
-        $user['status'] = 'active';
-    }
-}
-unset($user); // Break the reference
 
 $page_title = 'Manage Users';
 ob_start();
@@ -158,11 +160,11 @@ ob_start();
                                                     <?php echo htmlspecialchars($user['first_name'] . ' ' . $user['last_name']); ?>
                                                 </div>
                                                 <div class="text-sm text-gray-500">
-                                                    <?php if (isset($user['username']) && !empty($user['username'])): ?>
-                                                        @<?php echo htmlspecialchars($user['username']); ?>
-                                                    <?php else: ?>
-                                                        <span class="text-gray-400">No username</span>
-                                                    <?php endif; ?>
+                                                    <?php 
+                                                    // Use email as identifier if username is not available
+                                                    $identifier = !empty($user['email']) ? $user['email'] : '';
+                                                    echo htmlspecialchars($identifier); 
+                                                    ?>
                                                 </div>
                                             </div>
                                         </div>
@@ -172,28 +174,28 @@ ob_start();
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="text-sm text-gray-900">
-                                            <?php echo $user['is_admin'] ? 'Admin' : 'Freelancer'; ?>
+                                            <?php echo isset($user['is_admin']) && $user['is_admin'] ? 'Admin' : 'Freelancer'; ?>
                                         </div>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full 
                                             <?php 
-                                            $status = $user['status'] ?? 'active';
+                                            $status = isset($user['status']) ? $user['status'] : 'active';
                                             switch ($status) {
                                                 case 'active': echo 'bg-green-100 text-green-800'; break;
                                                 case 'suspended': echo 'bg-yellow-100 text-yellow-800'; break;
                                                 case 'banned': echo 'bg-red-100 text-red-800'; break;
                                                 case 'deleted': echo 'bg-gray-100 text-gray-800'; break;
-                                                default: echo 'bg-gray-100 text-gray-800';
+                                                default: echo 'bg-green-100 text-green-800';
                                             }
                                             ?>">
                                             <?php echo ucfirst(htmlspecialchars($status)); ?>
                                         </span>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                        <?php if (!$user['is_admin']): ?>
-                                            <div>Jobs: <?php echo $user['assigned_jobs']; ?></div>
-                                            <div>Bids: <?php echo $user['bid_count']; ?></div>
+                                        <?php if (!isset($user['is_admin']) || !$user['is_admin']): ?>
+                                            <div>Jobs: <?php echo isset($user['assigned_jobs']) ? $user['assigned_jobs'] : 0; ?></div>
+                                            <div>Bids: <?php echo isset($user['bid_count']) ? $user['bid_count'] : 0; ?></div>
                                         <?php else: ?>
                                             <div>Admin User</div>
                                         <?php endif; ?>
@@ -208,7 +210,10 @@ ob_start();
                                             <a href="view-profile.php?id=<?php echo $user['id']; ?>" class="text-primary hover:text-secondary">
                                                 View
                                             </a>
-                                            <?php if (($user['status'] ?? 'active') !== 'deleted'): ?>
+                                            <?php 
+                                            $status = isset($user['status']) ? $user['status'] : 'active';
+                                            if ($status !== 'deleted'): 
+                                            ?>
                                                 <form method="POST" class="inline" onsubmit="return confirm('Are you sure you want to delete this user?');">
                                                     <input type="hidden" name="action" value="delete_user">
                                                     <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
@@ -224,16 +229,15 @@ ob_start();
                                                         <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                                                             <?php 
                                                             $statuses = ['active', 'suspended', 'banned'];
-                                                            $currentStatus = $user['status'] ?? 'active';
-                                                            foreach ($statuses as $status): 
-                                                                if ($status !== $currentStatus):
+                                                            foreach ($statuses as $statusOption): 
+                                                                if ($statusOption !== $status):
                                                             ?>
                                                                 <form method="POST" class="block">
                                                                     <input type="hidden" name="action" value="update_status">
                                                                     <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
-                                                                    <input type="hidden" name="status" value="<?php echo $status; ?>">
+                                                                    <input type="hidden" name="status" value="<?php echo $statusOption; ?>">
                                                                     <button type="submit" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
-                                                                        <?php echo ucfirst($status); ?>
+                                                                        <?php echo ucfirst($statusOption); ?>
                                                                     </button>
                                                                 </form>
                                                             <?php 
