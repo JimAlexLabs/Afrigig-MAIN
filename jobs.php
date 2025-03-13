@@ -8,7 +8,7 @@ $stmt = $conn->prepare("
     SELECT j.*, COUNT(DISTINCT b.id) as bid_count, u.first_name, u.last_name 
     FROM jobs j 
     LEFT JOIN bids b ON j.id = b.job_id 
-    LEFT JOIN users u ON j.client_id = u.id
+    LEFT JOIN users u ON j.admin_id = u.id
     WHERE j.status = 'open' 
     GROUP BY j.id 
     ORDER BY j.created_at DESC
