@@ -68,95 +68,137 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $page_title = 'Register';
 $is_admin_registration = isset($_GET['type']) && $_GET['type'] === 'admin';
 
+// Custom CSS and JS
+$custom_css = ['assets/css/auth.css'];
+$custom_js = ['https://unpkg.com/aos@2.3.1/dist/aos.js'];
+
+// Additional styles for AOS
+$additional_styles = '
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+';
+
 ob_start();
 ?>
 
-<div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-md w-full space-y-8">
-        <div>
-            <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
-                Register as <?php echo $is_admin_registration ? 'Admin' : 'Freelancer'; ?>
-            </h2>
-            <p class="mt-2 text-center text-sm text-gray-600">
-                Or
-                <a href="login.php<?php echo $is_admin_registration ? '?type=admin' : ''; ?>" class="font-medium text-primary hover:text-secondary">
-                    sign in to your account
-                </a>
+<div class="auth-container">
+    <div class="auth-card">
+        <div class="auth-header">
+            <div class="auth-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                </svg>
+            </div>
+            <h1 class="auth-title">Create Account</h1>
+            <p class="auth-subtitle">
+                Register as <?php echo $is_admin_registration ? 'Admin' : 'Freelancer'; ?> or 
+                <a href="login.php<?php echo $is_admin_registration ? '?type=admin' : ''; ?>">sign in</a>
             </p>
         </div>
 
         <?php if (!empty($errors)): ?>
-            <div class="bg-red-50 border-l-4 border-red-400 p-4 mb-4">
-                <div class="flex">
-                    <div class="flex-shrink-0">
-                        <svg class="h-5 w-5 text-red-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
-                        </svg>
-                    </div>
-                    <div class="ml-3">
-                        <ul class="list-disc list-inside">
-                            <?php foreach ($errors as $error): ?>
-                                <li class="text-sm text-red-700"><?php echo htmlspecialchars($error); ?></li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
-                </div>
+            <div class="error-container">
+                <ul class="error-list">
+                    <?php foreach ($errors as $error): ?>
+                        <li><?php echo htmlspecialchars($error); ?></li>
+                    <?php endforeach; ?>
+                </ul>
             </div>
         <?php endif; ?>
 
-        <form class="mt-8 space-y-6" method="POST">
+        <form class="auth-form" method="POST">
             <input type="hidden" name="type" value="<?php echo $is_admin_registration ? 'admin' : 'user'; ?>">
             
-            <div class="rounded-md shadow-sm space-y-4">
-                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                    <div>
-                        <label for="first_name" class="sr-only">First Name</label>
-                        <input id="first_name" name="first_name" type="text" required 
-                               class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
-                               placeholder="First Name"
-                               value="<?php echo htmlspecialchars($_POST['first_name'] ?? ''); ?>">
-                    </div>
-                    
-                    <div>
-                        <label for="last_name" class="sr-only">Last Name</label>
-                        <input id="last_name" name="last_name" type="text" required 
-                               class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
-                               placeholder="Last Name"
-                               value="<?php echo htmlspecialchars($_POST['last_name'] ?? ''); ?>">
-                    </div>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="first_name" class="form-label">First Name</label>
+                    <input id="first_name" name="first_name" type="text" required class="form-control"
+                           value="<?php echo htmlspecialchars($_POST['first_name'] ?? ''); ?>">
                 </div>
-
-                <div>
-                    <label for="email" class="sr-only">Email address</label>
-                    <input id="email" name="email" type="email" autocomplete="email" required 
-                           class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
-                           placeholder="Email address"
-                           value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>">
-                </div>
-
-                <div>
-                    <label for="password" class="sr-only">Password</label>
-                    <input id="password" name="password" type="password" required 
-                           class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
-                           placeholder="Password">
-                </div>
-
-                <div>
-                    <label for="confirm_password" class="sr-only">Confirm Password</label>
-                    <input id="confirm_password" name="confirm_password" type="password" required 
-                           class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
-                           placeholder="Confirm Password">
+                
+                <div class="form-group">
+                    <label for="last_name" class="form-label">Last Name</label>
+                    <input id="last_name" name="last_name" type="text" required class="form-control"
+                           value="<?php echo htmlspecialchars($_POST['last_name'] ?? ''); ?>">
                 </div>
             </div>
 
-            <div>
-                <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
-                    Register
-                </button>
+            <div class="form-group">
+                <label for="email" class="form-label">Email address</label>
+                <input id="email" name="email" type="email" required class="form-control"
+                       value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>">
             </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <div class="password-field">
+                    <input id="password" name="password" type="password" required class="form-control">
+                    <button type="button" class="password-toggle" onclick="togglePassword('password')">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <small class="text-xs text-gray-500">Password must be at least 8 characters</small>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm_password" class="form-label">Confirm Password</label>
+                <div class="password-field">
+                    <input id="confirm_password" name="confirm_password" type="password" required class="form-control">
+                    <button type="button" class="password-toggle" onclick="togglePassword('confirm_password')">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+            </div>
+
+            <button type="submit" class="auth-button">
+                Create Account
+            </button>
         </form>
+
+        <div class="social-login">
+            <div class="social-login-title">Or register with</div>
+            <div class="social-buttons">
+                <a href="#" class="social-button">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="#" class="social-button">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-button">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
     </div>
 </div>
+
+<script>
+    function togglePassword(id) {
+        const passwordInput = document.getElementById(id);
+        const icon = document.querySelector(`#${id} + .password-toggle i`);
+        
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize AOS
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+        }
+    });
+</script>
 
 <?php
 $content = ob_get_clean();
