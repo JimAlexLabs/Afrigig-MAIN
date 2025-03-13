@@ -19,8 +19,6 @@ $stmt = $conn->prepare("
            u.first_name,
            u.last_name,
            u.profile_image,
-           u.rating,
-           u.jobs_completed,
            COUNT(DISTINCT b.id) as bid_count,
            MIN(b.amount) as lowest_bid,
            MAX(b.amount) as highest_bid,
@@ -47,9 +45,7 @@ $stmt = $conn->prepare("
     SELECT b.*,
            u.first_name,
            u.last_name,
-           u.profile_image,
-           u.rating,
-           u.jobs_completed
+           u.profile_image
     FROM bids b
     JOIN users u ON b.freelancer_id = u.id
     WHERE b.job_id = ?
@@ -267,15 +263,7 @@ ob_start();
         <div>
             <h3 class="font-bold"><?php echo htmlspecialchars($job['first_name'] . ' ' . $job['last_name']); ?></h3>
             <div class="text-secondary">
-                <?php if ($job['rating']): ?>
-                    <span class="text-warning">
-                        <?php echo str_repeat('★', round($job['rating'])) . str_repeat('☆', 5 - round($job['rating'])); ?>
-                    </span>
-                    <span class="ml-1"><?php echo number_format($job['rating'], 1); ?></span>
-                <?php endif; ?>
-                <?php if ($job['jobs_completed']): ?>
-                    <span class="ml-2"><?php echo $job['jobs_completed']; ?> jobs completed</span>
-                <?php endif; ?>
+                <span class="text-sm">Posted on <?php echo date('M j, Y', strtotime($job['created_at'])); ?></span>
             </div>
         </div>
     </div>
@@ -421,15 +409,7 @@ ob_start();
                     </div>
                     
                     <div class="text-sm text-secondary mb-2">
-                        <?php if ($bid['rating']): ?>
-                            <span class="text-warning">
-                                <?php echo str_repeat('★', round($bid['rating'])) . str_repeat('☆', 5 - round($bid['rating'])); ?>
-                            </span>
-                            <span class="ml-1"><?php echo number_format($bid['rating'], 1); ?></span>
-                        <?php endif; ?>
-                        <?php if ($bid['jobs_completed']): ?>
-                            <span class="ml-2"><?php echo $bid['jobs_completed']; ?> jobs completed</span>
-                        <?php endif; ?>
+                        <span>Bid placed <?php echo time_ago($bid['created_at']); ?></span>
                     </div>
                     
                     <p class="text-secondary">
@@ -443,9 +423,6 @@ ob_start();
                     </div>
                     <div class="text-sm text-secondary mb-2">
                         <?php echo $bid['timeline']; ?> days
-                    </div>
-                    <div class="text-xs text-secondary">
-                        <?php echo time_ago($bid['created_at']); ?>
                     </div>
                     
                     <?php if (is_admin() && $job['status'] === 'open' && $bid['status'] === 'pending'): ?>
