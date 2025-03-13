@@ -12,45 +12,43 @@ $user_id = $_SESSION['user_id'];
 $errors = [];
 $success = false;
 
-// Get conversations
+// Get conversations (grouped messages)
 $conn = getDbConnection();
 $stmt = $conn->prepare("
-    SELECT DISTINCT 
-        c.id as conversation_id,
-        c.job_id,
-        c.created_at,
-        j.title as job_title,
-        CASE 
-            WHEN c.sender_id = ? THEN r.first_name
-            ELSE s.first_name
-        END as other_user_name,
-        CASE 
-            WHEN c.sender_id = ? THEN r.id
-            ELSE s.id
-        END as other_user_id,
-        (
-            SELECT message 
-            FROM messages m2 
-            WHERE m2.conversation_id = c.id 
-            ORDER BY m2.created_at DESC 
-            LIMIT 1
-        ) as last_message,
-        (
-            SELECT created_at 
-            FROM messages m2 
-            WHERE m2.conversation_id = c.id 
-            ORDER BY m2.created_at DESC 
-            LIMIT 1
-        ) as last_message_date
-    FROM conversations c
-    JOIN jobs j ON c.job_id = j.id
-    JOIN users s ON c.sender_id = s.id
-    JOIN users r ON c.receiver_id = r.id
-    WHERE c.sender_id = ? OR c.receiver_id = ?
-    ORDER BY last_message_date DESC
+    SELECT 
+        m.id as message_id,
+        m.sender_id,
+        m.receiver_id,
+        m.message,
+        m.created_at as last_message_date,
+        s.first_name as sender_name,
+        s.id as sender_id,
+        r.first_name as receiver_name,
+        r.id as receiver_id,
+        j.id as job_id,
+        j.title as job_title
+    FROM messages m
+    JOIN users s ON m.sender_id = s.id
+    JOIN users r ON m.receiver_id = r.id
+    LEFT JOIN jobs j ON (
+        (m.sender_id = j.admin_id AND m.receiver_id = j.freelancer_id) OR
+        (m.receiver_id = j.admin_id AND m.sender_id = j.freelancer_id)
+    )
+    WHERE 
+        m.id IN (
+            SELECT MAX(id) 
+            FROM messages 
+            WHERE sender_id = ? OR receiver_id = ?
+            GROUP BY 
+                CASE 
+                    WHEN sender_id < receiver_id THEN CONCAT(sender_id, '-', receiver_id)
+                    ELSE CONCAT(receiver_id, '-', sender_id)
+                END
+        )
+    ORDER BY m.created_at DESC
 ");
 
-$stmt->bind_param("iiii", $user_id, $user_id, $user_id, $user_id);
+$stmt->bind_param("ii", $user_id, $user_id);
 $stmt->execute();
 $conversations = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
 
@@ -71,18 +69,30 @@ ob_start();
             <div class="bg-white shadow rounded-lg overflow-hidden">
                 <div class="divide-y divide-gray-200">
                     <?php foreach ($conversations as $conv): ?>
-                        <a href="chat.php?conversation=<?php echo $conv['conversation_id']; ?>" 
+                        <?php 
+                        // Determine the other user in the conversation
+                        $other_user_id = ($conv['sender_id'] == $user_id) ? $conv['receiver_id'] : $conv['sender_id'];
+                        $other_user_name = ($conv['sender_id'] == $user_id) ? $conv['receiver_name'] : $conv['sender_name'];
+                        
+                        // Create a unique conversation identifier
+                        $conversation_id = ($conv['sender_id'] < $conv['receiver_id']) 
+                            ? $conv['sender_id'] . '-' . $conv['receiver_id'] 
+                            : $conv['receiver_id'] . '-' . $conv['sender_id'];
+                        ?>
+                        <a href="chat.php?user=<?php echo $other_user_id; ?>" 
                            class="block p-6 hover:bg-gray-50 transition-colors">
                             <div class="flex justify-between items-start">
                                 <div>
                                     <h3 class="text-lg font-semibold text-gray-900">
-                                        <?php echo htmlspecialchars($conv['other_user_name']); ?>
+                                        <?php echo htmlspecialchars($other_user_name); ?>
                                     </h3>
+                                    <?php if (!empty($conv['job_title'])): ?>
                                     <p class="text-sm text-gray-600 mt-1">
                                         Re: <?php echo htmlspecialchars($conv['job_title']); ?>
                                     </p>
+                                    <?php endif; ?>
                                     <p class="text-sm text-gray-500 mt-2">
-                                        <?php echo htmlspecialchars($conv['last_message']); ?>
+                                        <?php echo htmlspecialchars($conv['message']); ?>
                                     </p>
                                 </div>
                                 <span class="text-xs text-gray-500">
