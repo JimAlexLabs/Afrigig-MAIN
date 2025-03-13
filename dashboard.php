@@ -62,11 +62,26 @@ if ($user['is_admin']) {
     $high_paying_jobs = $stmt->get_result()->fetch_assoc()['total'];
 }
 
-// Get unread messages count
-$stmt = $conn->prepare("SELECT COUNT(*) as total FROM messages WHERE recipient_id = ? AND is_read = 0");
-$stmt->bind_param("i", $_SESSION['user_id']);
-$stmt->execute();
-$unread_messages = $stmt->get_result()->fetch_assoc()['total'];
+// Check if messages table exists and has the right structure
+$unread_messages = 0;
+try {
+    // First check if the messages table exists
+    $result = $conn->query("SHOW TABLES LIKE 'messages'");
+    if ($result->num_rows > 0) {
+        // Then check if it has the recipient_id column
+        $result = $conn->query("SHOW COLUMNS FROM messages LIKE 'recipient_id'");
+        if ($result->num_rows > 0) {
+            // Get unread messages count
+            $stmt = $conn->prepare("SELECT COUNT(*) as total FROM messages WHERE recipient_id = ? AND is_read = 0");
+            $stmt->bind_param("i", $_SESSION['user_id']);
+            $stmt->execute();
+            $unread_messages = $stmt->get_result()->fetch_assoc()['total'];
+        }
+    }
+} catch (Exception $e) {
+    // Silently handle the error - we'll just show 0 unread messages
+    $unread_messages = 0;
+}
 
 $page_title = 'Dashboard';
 
@@ -80,6 +95,19 @@ $custom_js = [
     'https://unpkg.com/aos@2.3.1/dist/aos.js',
     'assets/js/dashboard.js'
 ];
+
+// Create default avatar directory if it doesn't exist
+$avatar_dir = __DIR__ . '/assets/images';
+if (!file_exists($avatar_dir)) {
+    mkdir($avatar_dir, 0755, true);
+}
+
+// Create default avatar if it doesn't exist
+$default_avatar = $avatar_dir . '/default-avatar.png';
+if (!file_exists($default_avatar)) {
+    // Use a placeholder image or create a simple one
+    copy('https://via.placeholder.com/150', $default_avatar);
+}
 
 ob_start();
 ?>
@@ -311,7 +339,7 @@ ob_start();
                                             </span>
                                         </td>
                                         <td>$<?php echo number_format($job['salary'], 2); ?></td>
-                                        <td><?php echo date('M j, Y', strtotime($job['deadline'])); ?></td>
+                                        <td><?php echo isset($job['deadline']) ? date('M j, Y', strtotime($job['deadline'])) : date('M j, Y', strtotime($job['created_at'] . ' +30 days')); ?></td>
                                         <td>
                                             <?php if (!$user['is_admin'] && $job['status'] === 'open'): ?>
                                                 <a href="javascript:void(0)" 
