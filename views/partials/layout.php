@@ -123,10 +123,10 @@ $theme = isset($_SESSION['theme']) ? $_SESSION['theme'] : 'light';
                 <div class="sidebar-footer">
                     <div class="user-info">
                         <img src="<?php echo isset($_SESSION['profile_image']) ? $_SESSION['profile_image'] : '/assets/images/default-avatar.png'; ?>" 
-                             alt="<?php echo $_SESSION['user_name']; ?>" 
+                             alt="<?php echo isset($_SESSION['user_name']) ? $_SESSION['user_name'] : $_SESSION['first_name'] . ' ' . $_SESSION['last_name']; ?>" 
                              class="avatar">
                         <div class="user-details">
-                            <div class="user-name"><?php echo $_SESSION['user_name']; ?></div>
+                            <div class="user-name"><?php echo isset($_SESSION['user_name']) ? $_SESSION['user_name'] : $_SESSION['first_name'] . ' ' . $_SESSION['last_name']; ?></div>
                             <div class="user-balance">Balance: <?php echo format_money(get_user_balance(get_current_user_id())); ?></div>
                         </div>
                     </div>

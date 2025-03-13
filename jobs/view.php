@@ -145,11 +145,38 @@ $page_title = $job['title'];
 // Additional styles
 $additional_styles = '
 <style>
+    :root {
+        --primary-color: #2563eb;
+        --secondary-color: #4f46e5;
+        --accent-color: #f97316;
+        --success-color: #10b981;
+        --warning-color: #f59e0b;
+        --danger-color: #ef4444;
+        --surface-color: #f8fafc;
+        --background-color: #ffffff;
+        --text-primary: #1e293b;
+        --text-secondary: #64748b;
+        --border-color: #e2e8f0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+    
     .job-header {
-        background: var(--surface-color);
+        background: var(--background-color);
         padding: 2rem;
         border-radius: 1rem;
         margin-bottom: 2rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .job-header:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     }
     
     .client-info {
@@ -157,6 +184,8 @@ $additional_styles = '
         align-items: center;
         gap: 1rem;
         margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid var(--border-color);
     }
     
     .client-avatar {
@@ -164,6 +193,9 @@ $additional_styles = '
         height: 4rem;
         border-radius: 50%;
         object-fit: cover;
+        border: 3px solid var(--primary-color);
+        padding: 2px;
+        background-color: white;
     }
     
     .job-meta {
@@ -176,20 +208,38 @@ $additional_styles = '
     .meta-item {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 1rem;
         color: var(--text-secondary);
+        padding: 1rem;
+        background-color: var(--surface-color);
+        border-radius: 0.75rem;
+        transition: all 0.3s ease;
+    }
+    
+    .meta-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     }
     
     .meta-icon {
-        width: 1.5rem;
-        height: 1.5rem;
+        width: 2rem;
+        height: 2rem;
+        color: var(--primary-color);
     }
     
     .job-description {
-        background: var(--surface-color);
+        background: var(--background-color);
         padding: 2rem;
         border-radius: 1rem;
         margin-bottom: 2rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    
+    .job-description h2 {
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 2px solid var(--border-color);
     }
     
     .attachments {
@@ -203,17 +253,33 @@ $additional_styles = '
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        padding: 0.5rem 1rem;
-        background: var(--background-color);
+        padding: 0.75rem 1.25rem;
+        background: var(--surface-color);
         border-radius: 0.5rem;
         color: var(--text-primary);
         text-decoration: none;
+        transition: all 0.3s ease;
+        border: 1px solid var(--border-color);
+    }
+    
+    .attachment:hover {
+        background: var(--primary-color);
+        color: white;
+        transform: translateY(-2px);
     }
     
     .bids-section {
-        background: var(--surface-color);
+        background: var(--background-color);
         padding: 2rem;
         border-radius: 1rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    
+    .bids-section h2 {
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 2px solid var(--border-color);
     }
     
     .bid-card {
@@ -221,6 +287,11 @@ $additional_styles = '
         gap: 1.5rem;
         padding: 1.5rem;
         border-bottom: 1px solid var(--border-color);
+        transition: all 0.3s ease;
+    }
+    
+    .bid-card:hover {
+        background-color: var(--surface-color);
     }
     
     .bid-card:last-child {
@@ -233,13 +304,151 @@ $additional_styles = '
     
     .bid-details {
         text-align: right;
+        min-width: 120px;
     }
     
     .bid-form {
-        background: var(--surface-color);
+        background: var(--background-color);
         padding: 2rem;
         border-radius: 1rem;
         margin-bottom: 2rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    
+    .bid-form h2 {
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 2px solid var(--border-color);
+    }
+    
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+    
+    .form-label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        color: var(--text-primary);
+    }
+    
+    .form-input {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border: 1px solid var(--border-color);
+        border-radius: 0.5rem;
+        background-color: var(--surface-color);
+        transition: all 0.3s ease;
+    }
+    
+    .form-input:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: none;
+    }
+    
+    .btn-primary {
+        background-color: var(--primary-color);
+        color: white;
+    }
+    
+    .btn-primary:hover {
+        background-color: var(--secondary-color);
+        transform: translateY(-2px);
+    }
+    
+    .btn-success {
+        background-color: var(--success-color);
+        color: white;
+    }
+    
+    .btn-success:hover {
+        background-color: #0ca678;
+        transform: translateY(-2px);
+    }
+    
+    .btn-danger {
+        background-color: var(--danger-color);
+        color: white;
+    }
+    
+    .btn-danger:hover {
+        background-color: #e03131;
+        transform: translateY(-2px);
+    }
+    
+    .btn-sm {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    .badge {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+    
+    .badge-success {
+        background-color: rgba(16, 185, 129, 0.1);
+        color: var(--success-color);
+    }
+    
+    .badge-warning {
+        background-color: rgba(245, 158, 11, 0.1);
+        color: var(--warning-color);
+    }
+    
+    .badge-danger {
+        background-color: rgba(239, 68, 68, 0.1);
+        color: var(--danger-color);
+    }
+    
+    .badge-primary {
+        background-color: rgba(37, 99, 235, 0.1);
+        color: var(--primary-color);
+    }
+    
+    .alert {
+        padding: 1rem 1.5rem;
+        border-radius: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .alert-info {
+        background-color: rgba(37, 99, 235, 0.1);
+        color: var(--primary-color);
+        border-left: 4px solid var(--primary-color);
+    }
+    
+    @media (max-width: 768px) {
+        .job-meta {
+            grid-template-columns: 1fr;
+        }
+        
+        .bid-card {
+            flex-direction: column;
+        }
+        
+        .bid-details {
+            text-align: left;
+            margin-top: 1rem;
+        }
     }
 </style>
 ';
@@ -248,204 +457,211 @@ $additional_styles = '
 ob_start();
 ?>
 
-<div class="job-header">
-    <div class="flex justify-between items-start mb-6">
-        <h1 class="text-2xl font-bold"><?php echo htmlspecialchars($job['title']); ?></h1>
-        <div class="badge badge-<?php echo get_status_color($job['status']); ?>">
-            <?php echo ucfirst($job['status']); ?>
-        </div>
-    </div>
-    
-    <div class="client-info">
-        <img src="<?php echo $job['profile_image'] ?? '/assets/images/default-avatar.png'; ?>" 
-             alt="<?php echo htmlspecialchars($job['first_name'] . ' ' . $job['last_name']); ?>"
-             class="client-avatar">
-        <div>
-            <h3 class="font-bold"><?php echo htmlspecialchars($job['first_name'] . ' ' . $job['last_name']); ?></h3>
-            <div class="text-secondary">
-                <span class="text-sm">Posted on <?php echo date('M j, Y', strtotime($job['created_at'])); ?></span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="job-meta">
-        <div class="meta-item">
-            <svg class="meta-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
-            </svg>
-            <div>
-                <div class="text-sm">Category</div>
-                <div class="font-bold"><?php echo isset($job['category_name']) ? htmlspecialchars($job['category_name']) : 'N/A'; ?></div>
+<div class="container">
+    <div class="job-header">
+        <div class="flex justify-between items-start mb-6">
+            <h1 class="text-2xl font-bold"><?php echo htmlspecialchars($job['title']); ?></h1>
+            <div class="badge badge-<?php echo get_status_color($job['status']); ?>">
+                <?php echo ucfirst($job['status']); ?>
             </div>
         </div>
         
-        <div class="meta-item">
-            <svg class="meta-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
+        <div class="client-info">
+            <img src="<?php echo $job['profile_image'] ?? '/assets/images/default-avatar.png'; ?>" 
+                 alt="<?php echo htmlspecialchars($job['first_name'] . ' ' . $job['last_name']); ?>"
+                 class="client-avatar">
             <div>
-                <div class="text-sm">Budget</div>
-                <div class="font-bold"><?php echo format_money($job['salary']); ?></div>
+                <h3 class="font-bold"><?php echo htmlspecialchars($job['first_name'] . ' ' . $job['last_name']); ?></h3>
+                <div class="text-secondary">
+                    <span class="text-sm">Posted on <?php echo date('M j, Y', strtotime($job['created_at'])); ?></span>
+                </div>
             </div>
         </div>
         
-        <div class="meta-item">
-            <svg class="meta-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-            <div>
-                <div class="text-sm">Deadline</div>
-                <div class="font-bold"><?php echo time_remaining($job['deadline']); ?> left</div>
+        <div class="job-meta">
+            <div class="meta-item">
+                <svg class="meta-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+                </svg>
+                <div>
+                    <div class="text-sm">Category</div>
+                    <div class="font-bold"><?php echo isset($job['category_name']) ? htmlspecialchars($job['category_name']) : 'N/A'; ?></div>
+                </div>
+            </div>
+            
+            <div class="meta-item">
+                <svg class="meta-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <div>
+                    <div class="text-sm">Budget</div>
+                    <div class="font-bold"><?php echo format_money($job['salary']); ?></div>
+                </div>
+            </div>
+            
+            <div class="meta-item">
+                <svg class="meta-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <div>
+                    <div class="text-sm">Deadline</div>
+                    <div class="font-bold"><?php echo time_remaining($job['deadline']); ?> left</div>
+                </div>
+            </div>
+            
+            <div class="meta-item">
+                <svg class="meta-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+                <div>
+                    <div class="text-sm">Bids</div>
+                    <div class="font-bold"><?php echo $job['bid_count']; ?> bids</div>
+                </div>
             </div>
         </div>
         
-        <div class="meta-item">
-            <svg class="meta-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
-            </svg>
-            <div>
-                <div class="text-sm">Bids</div>
-                <div class="font-bold"><?php echo $job['bid_count']; ?> bids</div>
+        <?php if ($job['bid_count'] > 0): ?>
+            <div class="flex gap-4 text-sm text-secondary">
+                <div>Lowest bid: <?php echo format_money($job['lowest_bid']); ?></div>
+                <div>Average bid: <?php echo format_money($job['average_bid']); ?></div>
+                <div>Highest bid: <?php echo format_money($job['highest_bid']); ?></div>
             </div>
-        </div>
-    </div>
-    
-    <?php if ($job['bid_count'] > 0): ?>
-        <div class="flex gap-4 text-sm text-secondary">
-            <div>Lowest bid: <?php echo format_money($job['lowest_bid']); ?></div>
-            <div>Average bid: <?php echo format_money($job['average_bid']); ?></div>
-            <div>Highest bid: <?php echo format_money($job['highest_bid']); ?></div>
-        </div>
-    <?php endif; ?>
-</div>
-
-<div class="job-description">
-    <h2 class="text-xl font-bold mb-4">Job Description</h2>
-    <?php echo nl2br(htmlspecialchars($job['description'])); ?>
-    
-    <?php if ($job['attachments']): ?>
-        <div class="attachments">
-            <?php foreach (json_decode($job['attachments']) as $attachment): ?>
-                <a href="/uploads/<?php echo $attachment; ?>" class="attachment" target="_blank">
-                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/>
-                    </svg>
-                    <?php echo htmlspecialchars($attachment); ?>
-                </a>
-            <?php endforeach; ?>
-        </div>
-    <?php endif; ?>
-</div>
-
-<?php if (is_logged_in() && !$has_bid && $job['status'] === 'open' && $job['admin_id'] !== get_current_user_id()): ?>
-    <div class="bid-form">
-        <h2 class="text-xl font-bold mb-4">Place Your Bid</h2>
-        <form method="POST" data-validate>
-            <input type="hidden" name="action" value="place_bid">
-            <input type="hidden" name="csrf_token" value="<?php echo generate_csrf_token(); ?>">
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div class="form-group">
-                    <label for="amount" class="form-label">Bid Amount</label>
-                    <input type="number" id="amount" name="amount" class="form-input" 
-                           min="1" step="0.01" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="timeline" class="form-label">Timeline (days)</label>
-                    <input type="number" id="timeline" name="timeline" class="form-input" 
-                           min="1" required>
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label for="proposal" class="form-label">Proposal</label>
-                <textarea id="proposal" name="proposal" class="form-input" rows="4" required></textarea>
-                <div class="text-sm text-secondary mt-1">
-                    Explain why you're the best person for this job and how you plan to complete it.
-                </div>
-            </div>
-            
-            <button type="submit" class="btn btn-primary">Submit Bid</button>
-        </form>
-    </div>
-<?php endif; ?>
-
-<?php if ($has_bid): ?>
-    <div class="alert alert-info mb-4">
-        You have already placed a bid on this job.
-        <?php if ($user_bid['status'] === 'pending'): ?>
-            Your bid is currently under review.
-        <?php elseif ($user_bid['status'] === 'accepted'): ?>
-            Congratulations! Your bid has been accepted.
-        <?php else: ?>
-            Your bid was <?php echo $user_bid['status']; ?>.
         <?php endif; ?>
     </div>
-<?php endif; ?>
 
-<div class="bids-section">
-    <h2 class="text-xl font-bold mb-4">Bids (<?php echo count($bids); ?>)</h2>
-    
-    <?php if (empty($bids)): ?>
-        <div class="text-center text-secondary py-8">
-            No bids yet. Be the first to bid on this job!
+    <div class="job-description">
+        <h2 class="text-xl font-bold mb-4">Job Description</h2>
+        <div class="prose max-w-none">
+            <?php echo nl2br(htmlspecialchars($job['description'])); ?>
         </div>
-    <?php else: ?>
-        <?php foreach ($bids as $bid): ?>
-            <div class="bid-card">
-                <img src="<?php echo $bid['profile_image'] ?? '/assets/images/default-avatar.png'; ?>" 
-                     alt="<?php echo htmlspecialchars($bid['first_name'] . ' ' . $bid['last_name']); ?>"
-                     class="w-12 h-12 rounded-full object-cover">
+        
+        <?php if (isset($job['attachments']) && $job['attachments']): ?>
+            <div class="attachments">
+                <?php foreach (json_decode($job['attachments']) as $attachment): ?>
+                    <a href="/uploads/<?php echo $attachment; ?>" class="attachment" target="_blank">
+                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/>
+                        </svg>
+                        <?php echo htmlspecialchars($attachment); ?>
+                    </a>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
+    </div>
+
+    <?php if (is_logged_in() && !$has_bid && $job['status'] === 'open' && $job['admin_id'] !== get_current_user_id()): ?>
+        <div class="bid-form">
+            <h2 class="text-xl font-bold mb-4">Place Your Bid</h2>
+            <form method="POST" data-validate>
+                <input type="hidden" name="action" value="place_bid">
+                <input type="hidden" name="csrf_token" value="<?php echo generate_csrf_token(); ?>">
                 
-                <div class="freelancer-info">
-                    <div class="flex items-center gap-2">
-                        <h3 class="font-bold">
-                            <?php echo htmlspecialchars($bid['first_name'] . ' ' . $bid['last_name']); ?>
-                        </h3>
-                        <?php if ($bid['status'] === 'accepted'): ?>
-                            <span class="badge badge-success">Accepted</span>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div class="form-group">
+                        <label for="amount" class="form-label">Bid Amount</label>
+                        <input type="number" id="amount" name="amount" class="form-input" 
+                               min="1" step="0.01" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="timeline" class="form-label">Timeline (days)</label>
+                        <input type="number" id="timeline" name="timeline" class="form-input" 
+                               min="1" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="proposal" class="form-label">Proposal</label>
+                    <textarea id="proposal" name="proposal" class="form-input" rows="4" required></textarea>
+                    <div class="text-sm text-secondary mt-1">
+                        Explain why you're the best person for this job and how you plan to complete it.
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit Bid</button>
+            </form>
+        </div>
+    <?php endif; ?>
+
+    <?php if ($has_bid): ?>
+        <div class="alert alert-info mb-4">
+            You have already placed a bid on this job.
+            <?php if ($user_bid['status'] === 'pending'): ?>
+                Your bid is currently under review.
+            <?php elseif ($user_bid['status'] === 'accepted'): ?>
+                Congratulations! Your bid has been accepted.
+            <?php else: ?>
+                Your bid was <?php echo $user_bid['status']; ?>.
+            <?php endif; ?>
+        </div>
+    <?php endif; ?>
+
+    <div class="bids-section">
+        <h2 class="text-xl font-bold mb-4">Bids (<?php echo count($bids); ?>)</h2>
+        
+        <?php if (empty($bids)): ?>
+            <div class="text-center text-secondary py-8">
+                <svg class="w-16 h-16 mx-auto mb-4 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+                <p class="text-lg font-medium">No bids yet. Be the first to bid on this job!</p>
+            </div>
+        <?php else: ?>
+            <?php foreach ($bids as $bid): ?>
+                <div class="bid-card">
+                    <img src="<?php echo $bid['profile_image'] ?? '/assets/images/default-avatar.png'; ?>" 
+                         alt="<?php echo htmlspecialchars($bid['first_name'] . ' ' . $bid['last_name']); ?>"
+                         class="w-12 h-12 rounded-full object-cover">
+                    
+                    <div class="freelancer-info">
+                        <div class="flex items-center gap-2">
+                            <h3 class="font-bold">
+                                <?php echo htmlspecialchars($bid['first_name'] . ' ' . $bid['last_name']); ?>
+                            </h3>
+                            <?php if ($bid['status'] === 'accepted'): ?>
+                                <span class="badge badge-success">Accepted</span>
+                            <?php endif; ?>
+                        </div>
+                        
+                        <div class="text-sm text-secondary mb-2">
+                            <span>Bid placed <?php echo time_ago($bid['created_at']); ?></span>
+                        </div>
+                        
+                        <p class="text-secondary">
+                            <?php echo nl2br(htmlspecialchars($bid['proposal'])); ?>
+                        </p>
+                    </div>
+                    
+                    <div class="bid-details">
+                        <div class="text-xl font-bold mb-1">
+                            <?php echo format_money($bid['amount']); ?>
+                        </div>
+                        <div class="text-sm text-secondary mb-2">
+                            <?php echo $bid['timeline']; ?> days
+                        </div>
+                        
+                        <?php if (is_admin() && $job['status'] === 'open' && $bid['status'] === 'pending'): ?>
+                            <div class="flex gap-2 mt-4">
+                                <form method="POST" class="inline">
+                                    <input type="hidden" name="action" value="accept_bid">
+                                    <input type="hidden" name="bid_id" value="<?php echo $bid['id']; ?>">
+                                    <input type="hidden" name="csrf_token" value="<?php echo generate_csrf_token(); ?>">
+                                    <button type="submit" class="btn btn-success btn-sm">Accept</button>
+                                </form>
+                                
+                                <form method="POST" class="inline">
+                                    <input type="hidden" name="action" value="reject_bid">
+                                    <input type="hidden" name="bid_id" value="<?php echo $bid['id']; ?>">
+                                    <input type="hidden" name="csrf_token" value="<?php echo generate_csrf_token(); ?>">
+                                    <button type="submit" class="btn btn-danger btn-sm">Reject</button>
+                                </form>
+                            </div>
                         <?php endif; ?>
                     </div>
-                    
-                    <div class="text-sm text-secondary mb-2">
-                        <span>Bid placed <?php echo time_ago($bid['created_at']); ?></span>
-                    </div>
-                    
-                    <p class="text-secondary">
-                        <?php echo nl2br(htmlspecialchars($bid['proposal'])); ?>
-                    </p>
                 </div>
-                
-                <div class="bid-details">
-                    <div class="text-xl font-bold mb-1">
-                        <?php echo format_money($bid['amount']); ?>
-                    </div>
-                    <div class="text-sm text-secondary mb-2">
-                        <?php echo $bid['timeline']; ?> days
-                    </div>
-                    
-                    <?php if (is_admin() && $job['status'] === 'open' && $bid['status'] === 'pending'): ?>
-                        <div class="flex gap-2 mt-4">
-                            <form method="POST" class="inline">
-                                <input type="hidden" name="action" value="accept_bid">
-                                <input type="hidden" name="bid_id" value="<?php echo $bid['id']; ?>">
-                                <input type="hidden" name="csrf_token" value="<?php echo generate_csrf_token(); ?>">
-                                <button type="submit" class="btn btn-success btn-sm">Accept</button>
-                            </form>
-                            
-                            <form method="POST" class="inline">
-                                <input type="hidden" name="action" value="reject_bid">
-                                <input type="hidden" name="bid_id" value="<?php echo $bid['id']; ?>">
-                                <input type="hidden" name="csrf_token" value="<?php echo generate_csrf_token(); ?>">
-                                <button type="submit" class="btn btn-danger btn-sm">Reject</button>
-                            </form>
-                        </div>
-                    <?php endif; ?>
-                </div>
-            </div>
-        <?php endforeach; ?>
-    <?php endif; ?>
+            <?php endforeach; ?>
+        <?php endif; ?>
+    </div>
 </div>
 
 <?php
