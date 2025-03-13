@@ -24,7 +24,7 @@ $stmt = $conn->prepare("
            MAX(b.amount) as highest_bid,
            AVG(b.amount) as average_bid
     FROM jobs j
-    LEFT JOIN users u ON j.client_id = u.id
+    LEFT JOIN users u ON j.admin_id = u.id
     LEFT JOIN bids b ON j.id = b.job_id
     WHERE j.id = ?
     GROUP BY j.id
@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         if ($stmt->execute()) {
             // Notify job owner
             create_notification(
-                $job['client_id'],
+                $job['admin_id'],
                 'New bid received',
                 "A new bid of " . format_money($amount) . " was placed on your job '{$job['title']}'",
                 'bid',
@@ -337,7 +337,7 @@ ob_start();
     <?php endif; ?>
 </div>
 
-<?php if (is_logged_in() && !$has_bid && $job['status'] === 'open' && $job['client_id'] !== get_current_user_id()): ?>
+<?php if (is_logged_in() && !$has_bid && $job['status'] === 'open' && $job['admin_id'] !== get_current_user_id()): ?>
     <div class="bid-form">
         <h2 class="text-xl font-bold mb-4">Place Your Bid</h2>
         <form method="POST" data-validate>
