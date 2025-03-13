@@ -29,8 +29,8 @@ if ($user['is_admin']) {
     $active_jobs = $conn->query("SELECT COUNT(*) as count FROM jobs WHERE admin_id = {$user_id} AND status = 'open'")->fetch_assoc()['count'];
 } else {
     // Freelancer statistics
-    $jobs_bid = $conn->query("SELECT COUNT(*) as count FROM bids WHERE freelancer_id = {$user_id}")->fetch_assoc()['count'];
-    $jobs_won = $conn->query("SELECT COUNT(*) as count FROM jobs WHERE freelancer_id = {$user_id} AND status = 'awarded'")->fetch_assoc()['count'];
+    $jobs_bid = $conn->query("SELECT COUNT(*) as count FROM bids WHERE user_id = {$user_id}")->fetch_assoc()['count'];
+    $jobs_won = $conn->query("SELECT COUNT(*) as count FROM jobs WHERE freelancer_id = {$user_id} AND status = 'assigned'")->fetch_assoc()['count'];
     $active_jobs = $conn->query("SELECT COUNT(*) as count FROM jobs WHERE freelancer_id = {$user_id} AND status = 'in_progress'")->fetch_assoc()['count'];
 }
 

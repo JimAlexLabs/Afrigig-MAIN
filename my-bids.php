@@ -22,7 +22,7 @@ $stmt = $conn->prepare("
     FROM bids b
     JOIN jobs j ON b.job_id = j.id
     JOIN users u ON j.admin_id = u.id
-    WHERE b.freelancer_id = ?
+    WHERE b.user_id = ?
     ORDER BY b.created_at DESC
 ");
 $stmt->bind_param("i", $_SESSION['user_id']);
