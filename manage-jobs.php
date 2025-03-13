@@ -182,22 +182,22 @@ ob_start();
                                         <?php endif; ?>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                        <div class="flex space-x-2">
-                                            <a href="view-job.php?id=<?php echo $job['id']; ?>" class="text-primary hover:text-secondary">
-                                                View
+                                        <div class="action-buttons">
+                                            <a href="view-job.php?id=<?php echo $job['id']; ?>" class="action-button view-button">
+                                                <i class="fas fa-eye mr-1"></i> View
                                             </a>
-                                            <form method="POST" class="inline" onsubmit="return confirm('Are you sure you want to delete this job?');">
+                                            <form method="POST" class="inline" onsubmit="return confirmDelete(event)">
                                                 <input type="hidden" name="action" value="delete_job">
                                                 <input type="hidden" name="job_id" value="<?php echo $job['id']; ?>">
-                                                <button type="submit" class="text-red-600 hover:text-red-900">
-                                                    Delete
+                                                <button type="submit" class="action-button delete-button">
+                                                    <i class="fas fa-trash-alt mr-1"></i> Delete
                                                 </button>
                                             </form>
                                             <div class="relative inline-block text-left" x-data="{ open: false }">
-                                                <button type="button" @click="open = !open" class="text-primary hover:text-secondary">
-                                                    Change Status
+                                                <button type="button" @click="open = !open" class="action-button status-button">
+                                                    <i class="fas fa-exchange-alt mr-1"></i> Change Status
                                                 </button>
-                                                <div x-show="open" @click.away="open = false" class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10">
+                                                <div x-show="open" @click.away="open = false" class="origin-top-right absolute right-0 mt-2 w-56 dropdown-menu">
                                                     <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                                                         <?php 
                                                         $statuses = ['open', 'assigned', 'in_progress', 'completed', 'cancelled'];
@@ -208,7 +208,7 @@ ob_start();
                                                                 <input type="hidden" name="action" value="update_status">
                                                                 <input type="hidden" name="job_id" value="<?php echo $job['id']; ?>">
                                                                 <input type="hidden" name="status" value="<?php echo $status; ?>">
-                                                                <button type="submit" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
+                                                                <button type="submit" class="dropdown-item block w-full text-left">
                                                                     <?php echo ucfirst($status); ?>
                                                                 </button>
                                                             </form>
@@ -233,5 +233,144 @@ ob_start();
 
 <?php
 $content = ob_get_clean();
+$custom_js = [
+    'assets/js/main.js',
+    'https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js'
+];
+
+// Add custom CSS for button styling
+$additional_styles = '
+<style>
+    .action-buttons {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .action-button {
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.375rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        transition: all 0.2s ease;
+    }
+    
+    .view-button {
+        background-color: rgba(59, 130, 246, 0.1);
+        color: var(--primary-color);
+    }
+    
+    .view-button:hover {
+        background-color: rgba(59, 130, 246, 0.2);
+    }
+    
+    .delete-button {
+        background-color: rgba(239, 68, 68, 0.1);
+        color: #ef4444;
+    }
+    
+    .delete-button:hover {
+        background-color: rgba(239, 68, 68, 0.2);
+    }
+    
+    .status-button {
+        background-color: rgba(16, 185, 129, 0.1);
+        color: #10b981;
+    }
+    
+    .status-button:hover {
+        background-color: rgba(16, 185, 129, 0.2);
+    }
+    
+    .dropdown-menu {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        border-radius: 0.375rem;
+        z-index: 50;
+    }
+    
+    .dropdown-item {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        transition: all 0.2s ease;
+    }
+    
+    .dropdown-item:hover {
+        background-color: rgba(243, 244, 246, 1);
+    }
+    
+    @media (max-width: 640px) {
+        .action-buttons {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .action-button {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+</style>
+';
+
 require_once 'views/layout.php';
-?> 
+?>
+
+<script>
+function confirmDelete(event) {
+    if (!confirm('Are you sure you want to delete this job?')) {
+        event.preventDefault();
+        return false;
+    }
+    return true;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Add loading state to forms when submitted
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+        form.addEventListener('submit', function() {
+            const button = this.querySelector('button[type="submit"]');
+            if (button) {
+                button.innerHTML = '<i class="fas fa-spinner fa-spin mr-1"></i> Processing...';
+                button.disabled = true;
+            }
+        });
+    });
+
+    // Add hover effects to buttons
+    const buttons = document.querySelectorAll('.action-button');
+    buttons.forEach(button => {
+        button.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px)';
+        });
+        button.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+
+    // Add success message animation
+    const successMessage = document.querySelector('.bg-green-100');
+    if (successMessage) {
+        successMessage.style.animation = 'fadeIn 0.5s ease-in-out';
+        setTimeout(() => {
+            successMessage.style.animation = 'fadeOut 0.5s ease-in-out forwards';
+        }, 3000);
+    }
+});
+</script>
+
+<style>
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-10px); }
+}
+</style> 
