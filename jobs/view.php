@@ -2,6 +2,11 @@
 // Debug information for form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     error_log('POST request received in jobs/view.php: ' . print_r($_POST, true));
+    
+    // Add more detailed debugging
+    error_log('REQUEST_URI: ' . $_SERVER['REQUEST_URI']);
+    error_log('QUERY_STRING: ' . $_SERVER['QUERY_STRING']);
+    error_log('HTTP_REFERER: ' . (isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'Not set'));
 }
 
 require_once __DIR__ . '/../config/config.php';
@@ -83,6 +88,9 @@ if (is_logged_in()) {
 
 // Handle bid submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
+    // Debug information
+    error_log('Processing form submission: ' . print_r($_POST, true));
+    
     if (!is_logged_in()) {
         set_flash_message('error', 'You must be logged in to bid on jobs');
         header('Location: /login');
@@ -112,6 +120,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
             exit;
         }
         
+        // Check if user already has a bid
+        if ($has_bid) {
+            set_flash_message('error', 'You have already placed a bid on this job');
+            header("Location: {$_SERVER['REQUEST_URI']}");
+            exit;
+        }
+        
         // Insert bid
         $stmt = $conn->prepare("
             INSERT INTO bids (job_id, user_id, amount, proposal, timeline)
@@ -121,6 +136,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         $user_id = get_current_user_id();
         $proposal = clean_input($_POST['proposal']);
         $timeline = (int)$_POST['timeline'];
+        
+        error_log("Attempting to insert bid: job_id=$job_id, user_id=$user_id, amount=$amount, timeline=$timeline");
         
         $stmt->bind_param('iidsi', $job_id, $user_id, $amount, $proposal, $timeline);
         
@@ -135,8 +152,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
             );
             
             set_flash_message('success', 'Your bid has been placed successfully');
+            error_log("Bid placed successfully");
         } else {
-            set_flash_message('error', 'Failed to place bid. Please try again.');
+            set_flash_message('error', 'Failed to place bid: ' . $conn->error);
+            error_log("Failed to place bid: " . $conn->error);
         }
         
         header("Location: {$_SERVER['REQUEST_URI']}");
@@ -931,30 +950,16 @@ $additional_scripts = '
         // Initialize interactive elements
         initializeInteractiveElements();
         
-        // Fix for bid form submission
-        const bidForm = document.querySelector(".bid-form");
-        if (bidForm) {
+        // Disable any form validation that might be interfering
+        const forms = document.querySelectorAll("form");
+        forms.forEach(form => {
             // Remove any data-validate attributes
-            bidForm.removeAttribute("data-validate");
+            form.removeAttribute("data-validate");
             
-            // Ensure the form submits normally
-            bidForm.addEventListener("submit", function(e) {
-                console.log("Form is being submitted");
-                // Don\'t prevent default submission
-            });
-            
-            // Ensure the button works
-            const submitButton = bidForm.querySelector("button[type=\'submit\']");
-            if (submitButton) {
-                submitButton.addEventListener("click", function(e) {
-                    console.log("Submit button clicked");
-                    // Submit the form directly
-                    setTimeout(function() {
-                        bidForm.submit();
-                    }, 100);
-                });
-            }
-        }
+            // Remove any event listeners that might be preventing submission
+            const oldForm = form.cloneNode(true);
+            form.parentNode.replaceChild(oldForm, form);
+        });
     });
     
     function initializeInteractiveElements() {
@@ -1141,8 +1146,9 @@ ob_start();
                 <?php endif; ?>
                 
                 <?php if (!$has_bid): ?>
-                    <form action="/jobs/place_bid.php" method="post" class="bid-form">
-                        <input type="hidden" name="job_id" value="<?php echo $job_id; ?>">
+                    <!-- Simple direct form with no JavaScript interference -->
+                    <form action="/jobs/view.php?id=<?php echo $job_id; ?>" method="post">
+                        <input type="hidden" name="action" value="place_bid">
                         <input type="hidden" name="csrf_token" value="<?php echo generate_csrf_token(); ?>">
                         
                         <div class="form-group">
@@ -1178,17 +1184,9 @@ ob_start();
                         </div>
                         
                         <div class="bid-actions">
-                            <button type="submit" class="btn btn-primary">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="btn-icon">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
-                                </svg>
-                                Submit Bid
-                            </button>
-                            
-                            <!-- Fallback submission method -->
-                            <noscript>
-                                <input type="submit" value="Submit Bid (No JavaScript)" class="btn btn-primary mt-2">
-                            </noscript>
+                            <input type="submit" value="Submit Bid" class="btn btn-primary">
+                            <a href="/jobs/test_form.php?job_id=<?php echo $job_id; ?>" class="btn btn-secondary" style="margin-left: 10px;">Test Form</a>
+                            <a href="/jobs/direct_bid.php?id=<?php echo $job_id; ?>" class="btn btn-success" style="margin-left: 10px;">Direct Bid</a>
                         </div>
                     </form>
                 <?php else: ?>
