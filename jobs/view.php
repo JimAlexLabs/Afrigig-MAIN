@@ -1,4 +1,9 @@
 <?php
+// Debug information for form submission
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    error_log('POST request received in jobs/view.php: ' . print_r($_POST, true));
+}
+
 require_once __DIR__ . '/../config/config.php';
 require_once __DIR__ . '/../includes/functions.php';
 require_once __DIR__ . '/../includes/auth.php';
@@ -925,6 +930,31 @@ $additional_scripts = '
     document.addEventListener("DOMContentLoaded", function() {
         // Initialize interactive elements
         initializeInteractiveElements();
+        
+        // Fix for bid form submission
+        const bidForm = document.querySelector(".bid-form");
+        if (bidForm) {
+            // Remove any data-validate attributes
+            bidForm.removeAttribute("data-validate");
+            
+            // Ensure the form submits normally
+            bidForm.addEventListener("submit", function(e) {
+                console.log("Form is being submitted");
+                // Don\'t prevent default submission
+            });
+            
+            // Ensure the button works
+            const submitButton = bidForm.querySelector("button[type=\'submit\']");
+            if (submitButton) {
+                submitButton.addEventListener("click", function(e) {
+                    console.log("Submit button clicked");
+                    // Submit the form directly
+                    setTimeout(function() {
+                        bidForm.submit();
+                    }, 100);
+                });
+            }
+        }
     });
     
     function initializeInteractiveElements() {
@@ -1111,8 +1141,8 @@ ob_start();
                 <?php endif; ?>
                 
                 <?php if (!$has_bid): ?>
-                    <form action="" method="post" class="bid-form">
-                        <input type="hidden" name="action" value="place_bid">
+                    <form action="/jobs/place_bid.php" method="post" class="bid-form">
+                        <input type="hidden" name="job_id" value="<?php echo $job_id; ?>">
                         <input type="hidden" name="csrf_token" value="<?php echo generate_csrf_token(); ?>">
                         
                         <div class="form-group">
@@ -1154,6 +1184,11 @@ ob_start();
                                 </svg>
                                 Submit Bid
                             </button>
+                            
+                            <!-- Fallback submission method -->
+                            <noscript>
+                                <input type="submit" value="Submit Bid (No JavaScript)" class="btn btn-primary mt-2">
+                            </noscript>
                         </div>
                     </form>
                 <?php else: ?>
@@ -1176,7 +1211,7 @@ ob_start();
                         </div>
                         
                         <div class="bid-actions">
-                            <form action="" method="post" class="delete-bid-form">
+                            <form action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post" class="delete-bid-form">
                                 <input type="hidden" name="action" value="delete_bid">
                                 <input type="hidden" name="csrf_token" value="<?php echo generate_csrf_token(); ?>">
                                 <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to withdraw your bid?');">
@@ -1244,7 +1279,7 @@ ob_start();
                                 <div class="bid-date">Bid placed on <?php echo date('M j, Y', strtotime($bid['created_at'])); ?></div>
                                 
                                 <?php if ($job['status'] == 'open'): ?>
-                                    <form action="" method="post" class="accept-bid-form">
+                                    <form action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post" class="accept-bid-form">
                                         <input type="hidden" name="action" value="accept_bid">
                                         <input type="hidden" name="csrf_token" value="<?php echo generate_csrf_token(); ?>">
                                         <input type="hidden" name="bid_id" value="<?php echo $bid['id']; ?>">
