@@ -29,6 +29,49 @@ $theme = isset($_SESSION['theme']) ? $_SESSION['theme'] : 'light';
     <!-- Styles -->
     <link rel="stylesheet" href="/assets/css/style.css">
     
+    <!-- Additional CSS for layout -->
+    <style>
+        .sidebar-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .theme-toggle-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .theme-toggle-btn:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+            transform: rotate(30deg);
+        }
+        
+        [data-theme="dark"] .theme-toggle-btn:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .theme-toggle-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+        
+        [data-theme="dark"] .theme-toggle-btn svg {
+            transform: rotate(180deg);
+        }
+    </style>
+    
     <!-- Additional page-specific styles -->
     <?php if (isset($additional_styles)) echo $additional_styles; ?>
 </head>
@@ -40,6 +83,11 @@ $theme = isset($_SESSION['theme']) ? $_SESSION['theme'] : 'light';
                 <a href="/" class="logo">
                     <img src="/assets/images/logo.png" alt="<?php echo SITE_NAME; ?>" height="40">
                 </a>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Theme">
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                    </svg>
+                </button>
                 <button id="mobile-menu-btn" class="mobile-menu-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
@@ -132,13 +180,6 @@ $theme = isset($_SESSION['theme']) ? $_SESSION['theme'] : 'light';
                     </div>
                     
                     <div class="settings-menu">
-                        <button id="theme-toggle" class="btn btn-secondary">
-                            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
-                            </svg>
-                            Toggle Theme
-                        </button>
-                        
                         <a href="/settings" class="btn btn-secondary">
                             <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>

@@ -89,6 +89,13 @@ ob_start();
 
 <div class="auth-container">
     <div class="auth-card">
+        <?php if (!isset($_GET['type']) || $_GET['type'] !== 'admin'): ?>
+            <div style="text-align: center; margin-bottom: 20px; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                <a href="login.php?type=admin" style="color: #1a73e8; text-decoration: none; font-weight: bold;">
+                    👉 Click here for Admin Login 👈
+                </a>
+            </div>
+        <?php endif; ?>
         <div class="auth-header">
             <div class="auth-logo">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

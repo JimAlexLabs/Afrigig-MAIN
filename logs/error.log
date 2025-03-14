@@ -873,3 +873,511 @@ Stack trace:
 [13-Mar-2025 01:30:33 UTC] Database connection successful
 [13-Mar-2025 01:30:39 UTC] Database connection successful
 [13-Mar-2025 01:33:03 UTC] Database connection successful
+[13-Mar-2025 12:07:17 UTC] Database connection successful
+[13-Mar-2025 12:07:31 UTC] Database connection successful
+[13-Mar-2025 12:08:41 UTC] Database connection successful
+[13-Mar-2025 12:11:10 UTC] Database connection successful
+[13-Mar-2025 12:11:18 UTC] Database connection successful
+[13-Mar-2025 12:11:51 UTC] Database connection successful
+[13-Mar-2025 12:12:26 UTC] Database connection successful
+[13-Mar-2025 12:14:36 UTC] Database connection successful
+[13-Mar-2025 12:14:45 UTC] Database connection successful
+[13-Mar-2025 12:14:46 UTC] Database connection successful
+[13-Mar-2025 12:14:56 UTC] Database connection successful
+[13-Mar-2025 12:15:28 UTC] Database connection successful
+[13-Mar-2025 12:23:51 UTC] Database connection successful
+[13-Mar-2025 12:23:57 UTC] Database connection successful
+[13-Mar-2025 12:26:27 UTC] Database connection successful
+[13-Mar-2025 12:41:09 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:41:09 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:41:09 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:41:09 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:41:09 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:41:09 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:41:09 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:41:09 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:41:09 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:41:09 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:41:09 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:41:09 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:41:22 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:41:22 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:41:22 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:41:22 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:41:22 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:41:22 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:41:22 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:41:22 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:41:22 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:41:22 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:41:22 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:41:22 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:41:27 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:41:27 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:41:27 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:41:27 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:41:27 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:41:27 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:41:27 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:41:27 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:41:27 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:41:27 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:41:27 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:41:27 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:42:01 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:42:01 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:42:01 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:42:01 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:42:01 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:42:01 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:42:01 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:42:01 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:42:01 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:42:01 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:42:01 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:42:01 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:43:56 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:43:56 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:43:56 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:43:56 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:43:56 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:43:56 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:43:56 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:43:56 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:43:56 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:43:56 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:43:56 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:43:56 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:43:59 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:43:59 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:43:59 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:43:59 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:43:59 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:43:59 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:43:59 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:43:59 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:43:59 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:43:59 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:43:59 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:43:59 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:44:00 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:44:00 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:44:00 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:44:00 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:44:00 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:44:00 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:44:00 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:44:00 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:44:00 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:44:00 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:44:00 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:44:00 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:44:02 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:44:02 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:44:02 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:44:02 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:44:02 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:44:02 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:44:02 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:44:02 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:44:02 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:44:02 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:44:02 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:44:02 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:44:04 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:44:04 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:44:04 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:44:04 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:44:04 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:44:04 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:44:04 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:44:04 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:44:04 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:44:04 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:44:04 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:44:04 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:52:08 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:52:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:52:08 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:52:08 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:52:08 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:52:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:52:08 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:52:08 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:52:08 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:52:08 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:52:08 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:52:08 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:52:11 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:52:11 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:52:11 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:52:11 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:52:11 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:52:11 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:52:11 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:52:11 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:52:11 UTC] PHP Warning:  Undefined array key "username" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:52:11 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 153
+[13-Mar-2025 12:52:11 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 169
+[13-Mar-2025 12:52:11 UTC] PHP Warning:  Undefined array key "status" in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 198
+[13-Mar-2025 12:54:13 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS status VARCHAR(20) DEFAULT 'active'' at line 1 in /Users/jimalex/Downloads/Afrigig/manage-users.php:72
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/manage-users.php(72): mysqli->query('ALTER TABLE use...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 72
+[13-Mar-2025 12:54:37 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS status VARCHAR(20) DEFAULT 'active'' at line 1 in /Users/jimalex/Downloads/Afrigig/manage-users.php:72
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/manage-users.php(72): mysqli->query('ALTER TABLE use...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 72
+[13-Mar-2025 12:54:54 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS status VARCHAR(20) DEFAULT 'active'' at line 1 in /Users/jimalex/Downloads/Afrigig/manage-users.php:72
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/manage-users.php(72): mysqli->query('ALTER TABLE use...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/manage-users.php on line 72
+[13-Mar-2025 15:18:33 UTC] Database connection successful
+[13-Mar-2025 15:18:57 UTC] Database connection successful
+[13-Mar-2025 15:19:06 UTC] Database connection successful
+[13-Mar-2025 15:19:36 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'afrigig_db.categories' doesn't exist in /Users/jimalex/Downloads/Afrigig/jobs/index.php:99
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs/index.php(99): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs/index.php on line 99
+[13-Mar-2025 15:27:30 UTC] Database connection successful
+[13-Mar-2025 15:27:34 UTC] Database connection successful
+[13-Mar-2025 15:29:01 UTC] Database connection successful
+[13-Mar-2025 15:32:59 UTC] Database connection successful
+[13-Mar-2025 15:33:20 UTC] Database connection successful
+[13-Mar-2025 15:34:35 UTC] Database connection successful
+[13-Mar-2025 15:34:49 UTC] Database connection successful
+[13-Mar-2025 15:35:26 UTC] Database connection successful
+[13-Mar-2025 15:35:32 UTC] Database connection successful
+[13-Mar-2025 15:35:39 UTC] Database connection successful
+[13-Mar-2025 15:42:10 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'recipient_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:66
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(66): mysqli->prepare('SELECT COUNT(*)...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 66
+[13-Mar-2025 15:44:06 UTC] Database connection successful
+[13-Mar-2025 15:44:06 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'recipient_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:66
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(66): mysqli->prepare('SELECT COUNT(*)...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 66
+[13-Mar-2025 15:44:07 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'recipient_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:66
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(66): mysqli->prepare('SELECT COUNT(*)...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 66
+[13-Mar-2025 15:44:10 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'recipient_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:66
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(66): mysqli->prepare('SELECT COUNT(*)...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 66
+[13-Mar-2025 15:44:26 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'recipient_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:66
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(66): mysqli->prepare('SELECT COUNT(*)...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 66
+[13-Mar-2025 15:44:36 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'recipient_id' in 'where clause' in /Users/jimalex/Downloads/Afrigig/dashboard.php:66
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/dashboard.php(66): mysqli->prepare('SELECT COUNT(*)...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/dashboard.php on line 66
+[13-Mar-2025 16:12:57 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /Users/jimalex/Downloads/Afrigig/profile.php on line 25
+[13-Mar-2025 16:12:57 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /Users/jimalex/Downloads/Afrigig/profile.php on line 26
+[13-Mar-2025 16:12:57 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /Users/jimalex/Downloads/Afrigig/profile.php on line 28
+[13-Mar-2025 16:12:57 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /Users/jimalex/Downloads/Afrigig/profile.php on line 29
+[13-Mar-2025 16:12:57 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /Users/jimalex/Downloads/Afrigig/profile.php on line 30
+[13-Mar-2025 16:13:29 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /Users/jimalex/Downloads/Afrigig/profile.php on line 25
+[13-Mar-2025 16:13:29 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /Users/jimalex/Downloads/Afrigig/profile.php on line 26
+[13-Mar-2025 16:13:29 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /Users/jimalex/Downloads/Afrigig/profile.php on line 28
+[13-Mar-2025 16:13:29 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /Users/jimalex/Downloads/Afrigig/profile.php on line 29
+[13-Mar-2025 16:13:29 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /Users/jimalex/Downloads/Afrigig/profile.php on line 30
+[13-Mar-2025 16:25:04 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'category' in 'field list' in /Users/jimalex/Downloads/Afrigig/find-jobs.php:81
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/find-jobs.php(81): mysqli->query('SELECT DISTINCT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/find-jobs.php on line 81
+[13-Mar-2025 16:25:19 UTC] PHP Warning:  Undefined array key "is_admin" in /Users/jimalex/Downloads/Afrigig/includes/sidebar.php on line 43
+[13-Mar-2025 16:25:19 UTC] PHP Warning:  Undefined array key "is_admin" in /Users/jimalex/Downloads/Afrigig/includes/sidebar.php on line 55
+[13-Mar-2025 16:25:19 UTC] PHP Warning:  Undefined array key "is_admin" in /Users/jimalex/Downloads/Afrigig/includes/header.php on line 64
+[13-Mar-2025 16:28:10 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'category' in 'field list' in /Users/jimalex/Downloads/Afrigig/find-jobs.php:81
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/find-jobs.php(81): mysqli->query('SELECT DISTINCT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/find-jobs.php on line 81
+[13-Mar-2025 16:28:56 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'category' in 'field list' in /Users/jimalex/Downloads/Afrigig/find-jobs.php:81
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/find-jobs.php(81): mysqli->query('SELECT DISTINCT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/find-jobs.php on line 81
+[13-Mar-2025 16:28:58 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.delivery_time' in 'field list' in /Users/jimalex/Downloads/Afrigig/my-jobs.php:33
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/my-jobs.php(33): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/my-jobs.php on line 33
+[13-Mar-2025 16:29:03 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'category' in 'field list' in /Users/jimalex/Downloads/Afrigig/find-jobs.php:81
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/find-jobs.php(81): mysqli->query('SELECT DISTINCT...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/find-jobs.php on line 81
+[13-Mar-2025 17:04:29 UTC] Database connection successful
+[13-Mar-2025 17:04:41 UTC] Database connection successful
+[13-Mar-2025 17:05:28 UTC] Database connection successful
+[13-Mar-2025 17:05:46 UTC] Database connection successful
+[13-Mar-2025 17:08:49 UTC] Database connection successful
+[13-Mar-2025 17:08:57 UTC] Database connection successful
+[13-Mar-2025 17:09:05 UTC] Database connection successful
+[13-Mar-2025 17:09:26 UTC] Database connection successful
+[13-Mar-2025 17:18:43 UTC] Database connection successful
+[13-Mar-2025 17:20:32 UTC] Database connection successful
+[13-Mar-2025 17:20:49 UTC] Database connection successful
+[13-Mar-2025 17:23:35 UTC] Database connection successful
+[13-Mar-2025 17:23:44 UTC] Database connection successful
+[13-Mar-2025 17:24:03 UTC] Database connection successful
+[13-Mar-2025 17:24:13 UTC] Database connection successful
+[13-Mar-2025 17:24:23 UTC] Database connection successful
+[13-Mar-2025 17:24:43 UTC] Database connection successful
+[13-Mar-2025 17:28:36 UTC] Database connection successful
+[13-Mar-2025 17:28:50 UTC] Database connection successful
+[13-Mar-2025 17:29:11 UTC] Database connection successful
+[13-Mar-2025 17:29:27 UTC] Database connection successful
+[13-Mar-2025 17:29:29 UTC] Database connection successful
+[13-Mar-2025 17:29:29 UTC] Database connection successful
+[13-Mar-2025 17:29:30 UTC] Database connection successful
+[13-Mar-2025 17:29:31 UTC] Database connection successful
+[13-Mar-2025 17:29:32 UTC] Database connection successful
+[13-Mar-2025 17:29:33 UTC] Database connection successful
+[13-Mar-2025 17:29:33 UTC] Database connection successful
+[13-Mar-2025 17:29:50 UTC] Database connection successful
+[13-Mar-2025 17:30:22 UTC] Database connection successful
+[13-Mar-2025 17:31:01 UTC] Database connection successful
+[13-Mar-2025 17:31:16 UTC] Database connection successful
+[13-Mar-2025 17:31:55 UTC] Database connection successful
+[13-Mar-2025 17:32:16 UTC] Database connection successful
+[13-Mar-2025 17:32:23 UTC] Database connection successful
+[13-Mar-2025 17:34:05 UTC] Database connection successful
+[13-Mar-2025 17:35:57 UTC] Database connection successful
+[13-Mar-2025 17:36:01 UTC] Database connection successful
+[13-Mar-2025 17:36:08 UTC] Database connection successful
+[13-Mar-2025 17:36:10 UTC] Database connection successful
+[13-Mar-2025 17:36:16 UTC] Database connection successful
+[13-Mar-2025 17:36:23 UTC] Database connection successful
+[13-Mar-2025 17:36:56 UTC] Database connection successful
+[13-Mar-2025 17:37:06 UTC] Database connection successful
+[13-Mar-2025 18:03:03 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'afrigig_db.categories' doesn't exist in /Users/jimalex/Downloads/Afrigig/jobs/view.php:17
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs/view.php(17): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs/view.php on line 17
+[13-Mar-2025 18:06:19 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.rating' in 'field list' in /Users/jimalex/Downloads/Afrigig/jobs/view.php:17
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs/view.php(17): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs/view.php on line 17
+[13-Mar-2025 18:06:22 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.rating' in 'field list' in /Users/jimalex/Downloads/Afrigig/jobs/view.php:17
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs/view.php(17): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs/view.php on line 17
+[13-Mar-2025 18:06:24 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.rating' in 'field list' in /Users/jimalex/Downloads/Afrigig/jobs/view.php:17
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs/view.php(17): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs/view.php on line 17
+[13-Mar-2025 18:06:27 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'u.rating' in 'field list' in /Users/jimalex/Downloads/Afrigig/jobs/view.php:17
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs/view.php(17): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs/view.php on line 17
+[13-Mar-2025 18:09:52 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.client_id' in 'on clause' in /Users/jimalex/Downloads/Afrigig/jobs/view.php:17
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs/view.php(17): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs/view.php on line 17
+[13-Mar-2025 18:10:04 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.client_id' in 'on clause' in /Users/jimalex/Downloads/Afrigig/jobs/view.php:17
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs/view.php(17): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs/view.php on line 17
+[13-Mar-2025 18:10:09 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'j.client_id' in 'on clause' in /Users/jimalex/Downloads/Afrigig/jobs/view.php:17
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs/view.php(17): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs/view.php on line 17
+[13-Mar-2025 18:13:39 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'on clause' in /Users/jimalex/Downloads/Afrigig/jobs/view.php:44
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs/view.php(44): mysqli->prepare('\n    SELECT b.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs/view.php on line 44
+[13-Mar-2025 18:13:48 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'b.freelancer_id' in 'on clause' in /Users/jimalex/Downloads/Afrigig/jobs/view.php:44
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs/view.php(44): mysqli->prepare('\n    SELECT b.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs/view.php on line 44
+[13-Mar-2025 18:16:55 UTC] PHP Warning:  Undefined array key "attachments" in /Users/jimalex/Downloads/Afrigig/jobs/view.php on line 326
+[13-Mar-2025 18:16:55 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 52
+[13-Mar-2025 18:16:55 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 59
+[13-Mar-2025 18:16:55 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 66
+[13-Mar-2025 18:16:55 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 76
+[13-Mar-2025 18:16:55 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 86
+[13-Mar-2025 18:16:55 UTC] PHP Warning:  Undefined array key "user_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 126
+[13-Mar-2025 18:16:55 UTC] PHP Warning:  Undefined array key "user_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 129
+[13-Mar-2025 18:19:03 UTC] PHP Warning:  Undefined array key "attachments" in /Users/jimalex/Downloads/Afrigig/jobs/view.php on line 326
+[13-Mar-2025 18:19:03 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 52
+[13-Mar-2025 18:19:03 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 59
+[13-Mar-2025 18:19:03 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 66
+[13-Mar-2025 18:19:03 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 76
+[13-Mar-2025 18:19:03 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 86
+[13-Mar-2025 18:19:03 UTC] PHP Warning:  Undefined array key "user_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 126
+[13-Mar-2025 18:19:03 UTC] PHP Warning:  Undefined array key "user_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 129
+[13-Mar-2025 18:19:39 UTC] PHP Warning:  Undefined array key "attachments" in /Users/jimalex/Downloads/Afrigig/jobs/view.php on line 326
+[13-Mar-2025 18:19:39 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 52
+[13-Mar-2025 18:19:39 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 59
+[13-Mar-2025 18:19:39 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 66
+[13-Mar-2025 18:19:39 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 76
+[13-Mar-2025 18:19:39 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 86
+[13-Mar-2025 18:19:39 UTC] PHP Warning:  Undefined array key "user_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 126
+[13-Mar-2025 18:19:39 UTC] PHP Warning:  Undefined array key "user_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 129
+[13-Mar-2025 18:24:19 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 52
+[13-Mar-2025 18:24:19 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 59
+[13-Mar-2025 18:24:19 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 66
+[13-Mar-2025 18:24:19 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 76
+[13-Mar-2025 18:24:19 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 86
+[13-Mar-2025 18:24:19 UTC] PHP Warning:  Undefined array key "last_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 126
+[13-Mar-2025 18:24:19 UTC] PHP Warning:  Undefined array key "last_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 129
+[13-Mar-2025 18:24:32 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 52
+[13-Mar-2025 18:24:32 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 59
+[13-Mar-2025 18:24:32 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 66
+[13-Mar-2025 18:24:32 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 76
+[13-Mar-2025 18:24:32 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 86
+[13-Mar-2025 18:24:32 UTC] PHP Warning:  Undefined array key "last_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 126
+[13-Mar-2025 18:24:32 UTC] PHP Warning:  Undefined array key "last_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 129
+[13-Mar-2025 18:24:35 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 52
+[13-Mar-2025 18:24:35 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 59
+[13-Mar-2025 18:24:35 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 66
+[13-Mar-2025 18:24:35 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 76
+[13-Mar-2025 18:24:35 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 86
+[13-Mar-2025 18:24:35 UTC] PHP Warning:  Undefined array key "last_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 126
+[13-Mar-2025 18:24:35 UTC] PHP Warning:  Undefined array key "last_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 129
+[13-Mar-2025 18:24:39 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 52
+[13-Mar-2025 18:24:39 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 59
+[13-Mar-2025 18:24:39 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 66
+[13-Mar-2025 18:24:39 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 76
+[13-Mar-2025 18:24:39 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 86
+[13-Mar-2025 18:24:39 UTC] PHP Warning:  Undefined array key "last_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 126
+[13-Mar-2025 18:24:39 UTC] PHP Warning:  Undefined array key "last_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 129
+[13-Mar-2025 18:24:46 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 52
+[13-Mar-2025 18:24:46 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 59
+[13-Mar-2025 18:24:46 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 66
+[13-Mar-2025 18:24:46 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 76
+[13-Mar-2025 18:24:46 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 86
+[13-Mar-2025 18:24:46 UTC] PHP Warning:  Undefined array key "last_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 126
+[13-Mar-2025 18:24:46 UTC] PHP Warning:  Undefined array key "last_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 129
+[13-Mar-2025 18:25:11 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 52
+[13-Mar-2025 18:25:11 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 59
+[13-Mar-2025 18:25:11 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 66
+[13-Mar-2025 18:25:11 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 76
+[13-Mar-2025 18:25:11 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 86
+[13-Mar-2025 18:25:11 UTC] PHP Warning:  Undefined array key "last_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 126
+[13-Mar-2025 18:25:11 UTC] PHP Warning:  Undefined array key "last_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 129
+[13-Mar-2025 18:42:32 UTC] PHP Warning:  Undefined array key "user_type" in /Users/jimalex/Downloads/Afrigig/jobs/view.php on line 969
+[13-Mar-2025 18:42:32 UTC] PHP Warning:  Undefined array key "user_id" in /Users/jimalex/Downloads/Afrigig/jobs/view.php on line 1066
+[13-Mar-2025 18:42:32 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 100
+[13-Mar-2025 18:42:32 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 107
+[13-Mar-2025 18:42:32 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 114
+[13-Mar-2025 18:42:32 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 124
+[13-Mar-2025 18:42:32 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 134
+[13-Mar-2025 18:42:32 UTC] PHP Warning:  Undefined array key "last_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 174
+[13-Mar-2025 18:42:32 UTC] PHP Warning:  Undefined array key "last_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 177
+[13-Mar-2025 18:42:59 UTC] Database connection successful
+[13-Mar-2025 18:43:12 UTC] Database connection successful
+[13-Mar-2025 18:44:03 UTC] Database connection successful
+[13-Mar-2025 18:51:58 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'afrigig_db.categories' doesn't exist in /Users/jimalex/Downloads/Afrigig/jobs/index.php:99
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs/index.php(99): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs/index.php on line 99
+[13-Mar-2025 18:59:35 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'afrigig_db.categories' doesn't exist in /Users/jimalex/Downloads/Afrigig/jobs/index.php:99
+Stack trace:
+#0 /Users/jimalex/Downloads/Afrigig/jobs/index.php(99): mysqli->prepare('\n    SELECT j.*...')
+#1 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/jobs/index.php on line 99
+[14-Mar-2025 21:49:50 UTC] Database connection successful
+[14-Mar-2025 21:50:26 UTC] Database connection successful
+[14-Mar-2025 21:50:44 UTC] Database connection successful
+[14-Mar-2025 21:50:59 UTC] Database connection successful
+[14-Mar-2025 21:53:32 UTC] Database connection successful
+[14-Mar-2025 21:54:02 UTC] Database connection successful
+[14-Mar-2025 21:54:18 UTC] Database connection successful
+[14-Mar-2025 21:54:44 UTC] Database connection successful
+[14-Mar-2025 21:54:51 UTC] Database connection successful
+[14-Mar-2025 21:54:58 UTC] Database connection successful
+[14-Mar-2025 21:56:18 UTC] Database connection successful
+[14-Mar-2025 21:58:06 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'user_type' in 'where clause' in Command line code:1
+Stack trace:
+#0 Command line code(1): mysqli->prepare('SELECT id, emai...')
+#1 {main}
+  thrown in Command line code on line 1
+[14-Mar-2025 22:00:32 UTC] Database connection successful
+[14-Mar-2025 22:00:37 UTC] Database connection successful
+[14-Mar-2025 22:01:02 UTC] Database connection successful
+[14-Mar-2025 22:01:22 UTC] Database connection successful
+[14-Mar-2025 22:01:30 UTC] Database connection successful
+[14-Mar-2025 22:02:50 UTC] Database connection successful
+[14-Mar-2025 22:03:00 UTC] Database connection successful
+[14-Mar-2025 22:03:06 UTC] Database connection successful
+[14-Mar-2025 22:03:47 UTC] Database connection successful
+[14-Mar-2025 22:04:16 UTC] Database connection successful
+[14-Mar-2025 22:06:36 UTC] Database connection successful
+[14-Mar-2025 22:06:44 UTC] Database connection successful
+[14-Mar-2025 22:06:52 UTC] Database connection successful
+[14-Mar-2025 22:07:13 UTC] Database connection successful
+[14-Mar-2025 22:07:17 UTC] Database connection successful
+[14-Mar-2025 22:08:01 UTC] Database connection successful
+[14-Mar-2025 22:08:09 UTC] Database connection successful
+[14-Mar-2025 22:09:03 UTC] Database connection successful
+[14-Mar-2025 22:09:15 UTC] Database connection successful
+[14-Mar-2025 22:09:21 UTC] Database connection successful
+[14-Mar-2025 22:09:33 UTC] Database connection successful
+[14-Mar-2025 22:11:34 UTC] PHP Fatal error:  Uncaught Error: mysqli_stmt::bind_param(): Argument #3 could not be passed by reference in /Users/jimalex/Downloads/Afrigig/fix_admin.php:20
+Stack trace:
+#0 {main}
+  thrown in /Users/jimalex/Downloads/Afrigig/fix_admin.php on line 20
+[14-Mar-2025 22:12:21 UTC] Database connection successful
+[14-Mar-2025 22:12:59 UTC] Database connection successful
+[14-Mar-2025 22:13:11 UTC] Database connection successful
+[14-Mar-2025 22:13:23 UTC] Database connection successful
+[14-Mar-2025 22:16:35 UTC] Database connection successful
+[14-Mar-2025 22:16:50 UTC] Database connection successful
+[14-Mar-2025 22:17:02 UTC] Database connection successful
+[14-Mar-2025 22:18:35 UTC] PHP Warning:  Undefined array key "user_type" in /Users/jimalex/Downloads/Afrigig/jobs/view.php on line 1125
+[14-Mar-2025 22:18:35 UTC] PHP Warning:  Undefined array key "user_id" in /Users/jimalex/Downloads/Afrigig/jobs/view.php on line 1232
+[14-Mar-2025 22:18:35 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 100
+[14-Mar-2025 22:18:35 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 107
+[14-Mar-2025 22:18:35 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 114
+[14-Mar-2025 22:18:35 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 124
+[14-Mar-2025 22:18:35 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 134
+[14-Mar-2025 22:18:35 UTC] PHP Warning:  Undefined array key "last_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 174
+[14-Mar-2025 22:18:35 UTC] PHP Warning:  Undefined array key "last_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 177
+[14-Mar-2025 22:18:49 UTC] PHP Warning:  Undefined array key "user_type" in /Users/jimalex/Downloads/Afrigig/jobs/view.php on line 1125
+[14-Mar-2025 22:18:49 UTC] PHP Warning:  Undefined array key "user_id" in /Users/jimalex/Downloads/Afrigig/jobs/view.php on line 1232
+[14-Mar-2025 22:18:49 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 100
+[14-Mar-2025 22:18:49 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 107
+[14-Mar-2025 22:18:49 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 114
+[14-Mar-2025 22:18:49 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 124
+[14-Mar-2025 22:18:49 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 134
+[14-Mar-2025 22:18:49 UTC] PHP Warning:  Undefined array key "last_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 174
+[14-Mar-2025 22:18:49 UTC] PHP Warning:  Undefined array key "last_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 177
+[14-Mar-2025 22:18:51 UTC] PHP Warning:  Undefined array key "user_type" in /Users/jimalex/Downloads/Afrigig/jobs/view.php on line 1125
+[14-Mar-2025 22:18:51 UTC] PHP Warning:  Undefined array key "user_id" in /Users/jimalex/Downloads/Afrigig/jobs/view.php on line 1232
+[14-Mar-2025 22:18:51 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 100
+[14-Mar-2025 22:18:51 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 107
+[14-Mar-2025 22:18:51 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 114
+[14-Mar-2025 22:18:51 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 124
+[14-Mar-2025 22:18:51 UTC] PHP Warning:  Undefined variable $current_page in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 134
+[14-Mar-2025 22:18:51 UTC] PHP Warning:  Undefined array key "last_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 174
+[14-Mar-2025 22:18:51 UTC] PHP Warning:  Undefined array key "last_name" in /Users/jimalex/Downloads/Afrigig/views/partials/layout.php on line 177
+[14-Mar-2025 22:23:18 UTC] Database connection successful
+[14-Mar-2025 22:23:32 UTC] Database connection successful
